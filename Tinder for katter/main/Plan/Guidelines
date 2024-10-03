@@ -1,0 +1,40 @@
+CSS Style Guidelines for Tinderappen
+
+Valid size and spacing properties:
+        
+         4-8-12     
+        16-20-24
+        28-32-36
+        40-44-48
+        52-56-60
+        64-68-72
+        76-80-84
+
+Use "em" for text and "rem" for spacing
+"vh" and "vw" are also applicable for sizing
+
+Layout : Flex / flex-wrapper
+
+Avoid using px where possiple as this is non-responsive
+Instances where px can be used: 
+  - borders for buttons etc
+
+--------------------------------------------
+---Theme 1---
+Background Color: Black      || => #000F08
+Text Color: White            || => #F4FFF8
+Button Color: Red            || => #B80900
+--------------------------------------------
+---Theme 2---
+Background Color: Dark Gray  || => #303336  
+Text Color: Silver           || => #FDFFFC
+Button Color: Orange         || => #F75C03
+--------------------------------------------
+---Theme 3---
+Background Color: Deep Red   || => #B80018
+Text Color: Cream            || => #F4F7BE
+Button Color: Black          || => #0A0F0D
+--------------------------------------------
+
+
+
