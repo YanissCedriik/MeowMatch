@@ -1,3 +1,3 @@
-function chatInboxView(){
-    
+function updateChatInboxView(){
+    let html = /*HTML*/``
 }

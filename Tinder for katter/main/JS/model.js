@@ -50,7 +50,7 @@ const model = {
 
     males:
     {
-        ID: 1001,
+        ID: 0,
         username: "Rogermann",
         password: "eksempelpassord",
         email: "roger@gmail.com",
@@ -77,7 +77,7 @@ const model = {
    
     females: 
         {
-            ID: 1002,
+            ID: 1,
             username: "sophia92",
             password: "password123",
             email: "sophia92@example.com",

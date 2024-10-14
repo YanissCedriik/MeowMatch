@@ -1,4 +1,4 @@
-function userProfileUpdateView(){
+function updateUserProfileView(){
     
 }
 
@@ -16,6 +16,10 @@ function createImgStream(){
 }
 
 function createBio(){
-    let html='';
-    for(let index=0; model.users[index].)
+    let bioHTML='';
+    for (let i = 0; i < model.users[i].bio.length; i++) {  
+        bioHTML = /*HTML*/ `
+        <div>Bio</div>
+        `
+      }
 }
