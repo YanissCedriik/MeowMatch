@@ -2,7 +2,7 @@
 
 const model = {
   app: {
-    pages: ["userLogin", "registerUser", "userProfile", "mainFeed", "chatInbox", "chatRoom", "admin",],
+    pages: ["userLogin", "registerUser", "userProfile", "mainFeed", "chatInbox", "chatRoom", "adminPage",],
     currentPage: 'userLogin',
   },// app Syntax
 
@@ -48,7 +48,7 @@ const model = {
   
     users: {
 
-    males: [
+    males:
     {
         ID: 1001,
         username: "Rogermann",
@@ -73,9 +73,9 @@ const model = {
     },
         
 
-    ],//Males Syntax
+    //Males Syntax
    
-    females: [
+    females: 
         {
             ID: 1002,
             username: "sophia92",
@@ -100,7 +100,7 @@ const model = {
         },
         
     
-    ],// Females Syntax
+    // Females Syntax
 
     },//Users Syntax
   
