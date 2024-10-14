@@ -1,3 +1,4 @@
+updateLoginView()
 function updateLoginView(){
     document.getElementById('app').innerHTML = /*HTML*/ `
     
