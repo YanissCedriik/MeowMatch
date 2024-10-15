@@ -6,10 +6,10 @@ function changeView() {
         updateUserLoginView();
     }
     else if (currentPage == pageNumber[1]) {
-        updateUserProfileView();
+        updateRegisterView();
     }
     else if (currentPage == pageNumber[2]) {
-        updateRegisterView();
+        updateUserProfileView();
     }
     else if (currentPage == pageNumber[3]) {
         updateMainFeedView();
