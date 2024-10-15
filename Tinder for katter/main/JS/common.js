@@ -26,7 +26,22 @@ function changeView() {
 
 }
 
+
+function goToLogOut(){
+    model.app.currentPage = model.app.pages[0];
+    changeView();
+}
 function goToProfile(){
-    model.app.currentPage = model.app.pages[2];
+    model.app.currentPage = model.app.pages[2]
+}
+
+
+function goToMainFeed(){
+    model.app.currentPage = model.app.pages[3];
+    changeView();
+}
+
+function goToMatches(){
+    model.app.currentPage = model.app.pages[4];
     changeView();
 }
