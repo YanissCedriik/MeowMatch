@@ -26,14 +26,15 @@ function changeView() {
 
 }
 
+
 function goToLogOut(){
     model.app.currentPage = model.app.pages[0];
     changeView();
 }
 function goToProfile(){
-    model.app.currentPage = model.app.pages[2];
-    changeView();
+    model.app.currentPage = model.app.pages[2]
 }
+
 
 function goToMainFeed(){
     model.app.currentPage = model.app.pages[3];
