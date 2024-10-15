@@ -1,5 +1,7 @@
 function updateChatRoomView(){
     chatRoomPage = /*HTML*/`
-    <h1>chatRoomPage</h1>`
+    <h1>chatRoom</h1>
+    
+    `
     appDiv.innerHTML = chatRoomPage;
 }

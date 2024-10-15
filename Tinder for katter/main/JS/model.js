@@ -10,7 +10,7 @@ const model = {
       "chatInboxPage",
       "chatRoomPage",
       "adminPage",],
-    currentPage: 'userLoginPage',
+    currentPage: 'chatInboxPage',
   },// app Syntax
 
 
@@ -80,7 +80,7 @@ const model = {
 
         },
 
-    //Males Syntax
+   
    
         {
             Id: 1,
@@ -106,7 +106,7 @@ const model = {
             messagePrompts: ["What's your favorite book?", "Tell me about your last adventure."],
       },
     
-    // Females Syntax
+   
       ],//Users Syntax
   
 
