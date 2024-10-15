@@ -1,21 +1,31 @@
 //model
-
+const appDiv = document.getElementById('app')
 const model = {
   app: {
-    pages: ["userLogin", "registerUser", "userProfile", "mainFeed", "chatInbox", "chatRoom", "adminPage",],
-    currentPage: 'userLogin',
+    pages: [
+      "userLoginPage",
+      "registerUserPage",
+      "userProfilePage",
+      "mainFeedPage",
+      "chatInboxPage",
+      "chatRoomPage",
+      "adminPage",],
+    currentPage: 'adminPage',
   },// app Syntax
 
 
 
-  inputs: {
+  input: {
     loginUser: {
         username: null,
         password: null,
     
     },//loginInputs Syntax
 
-
+    profile: {
+      selectedUser: 0,
+      selectedMatch: 0,
+    },
 
     registerUser: {
       username: null,
@@ -35,8 +45,6 @@ const model = {
 
     messagesInput: {
         messageToPush: null,
-        chat: [],
-        
 
     },//Messages Syntax
 
