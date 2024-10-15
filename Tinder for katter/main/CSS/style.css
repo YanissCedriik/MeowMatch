@@ -14,12 +14,27 @@ body {
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Change to space-between */
     align-items: center;
     padding: 20px;
     position: absolute;
     left: 4vw;
+    right: 4vw; 
 }
+
+.button {
+    position: fixed;
+    top: 2vh;
+    right: 4vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.button img{
+    width: 3.4em;
+}
+
 
 .logo {
     position: fixed;
