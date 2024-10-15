@@ -5,11 +5,11 @@ function changeView() {
     if (currentPage == pageNumber[0]) {
         updateUserLoginView();
     }
-    else if (currentPage == pageNumber[2]) {
-        updateUserProfileView();
-    }
     else if (currentPage == pageNumber[1]) {
         updateRegisterView();
+    }
+    else if (currentPage == pageNumber[2]) {
+        updateUserProfileView();
     }
     else if (currentPage == pageNumber[3]) {
         updateMainFeedView();
@@ -27,6 +27,6 @@ function changeView() {
 }
 
 function goToProfile(){
-    model.app.currentPage = model.app.pages[1];
+    model.app.currentPage = model.app.pages[2];
     changeView();
 }
