@@ -14,7 +14,7 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between; /* Change to space-between */
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
     position: absolute;
@@ -169,7 +169,7 @@ input[type="radio"] {
     width: 20px;
     height: 20px;
     border: 2px solid #FF6F61;
-    border-radius: 50%; /* Make it circular */
+    border-radius: 50%;
     margin-right: 10px;
     transition: background-color 0.3s, border-color 0.3s;
 }
@@ -279,10 +279,10 @@ footer button:hover img {
 }
 
 .userLocation {
-    display: flex; /* Flex to align icon and text */
+    display: flex; 
     justify-content: left;
     align-items: center;
-    margin-bottom: .2rem; /* Space below location */
+    margin-bottom: .2rem; 
 }
 .userLocation img {
     width: 1em;
@@ -373,7 +373,7 @@ footer button:hover img {
 
 .innerCardMatches {
     display: flex;
-    gap: 10px; /* Space between images */
+    gap: 10px; 
 }
 
 .innerCardMatches img{
@@ -393,7 +393,7 @@ footer button:hover img {
 }
 
 .chatMatchPreview:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Highlight on hover */
+    background-color: rgba(255, 255, 255, 0.2); 
 }
 
 .smallPreviewImage img {
