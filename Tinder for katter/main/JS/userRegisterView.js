@@ -9,7 +9,7 @@ function updateRegisterView(){
         <input type="password" placeholder= "Passord..." class="input-field">
         <input type="password" placeholder= "Confirm Passord..." class="input-field">
         <input type="datetime-local" placeholder= "Alder..." class="input-field">
-        <input type="text" placeholder= "Gender..." class="input-field">
+        <input type="datetime-local" placeholder= "Alder..." class="input-field">
         <input type="text" placeholder= "By..." class="input-field">
         <div>Jeg liker...</div>
     <div>
