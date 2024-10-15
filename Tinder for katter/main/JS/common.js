@@ -5,10 +5,10 @@ function changeView() {
     if (currentPage == pageNumber[0]) {
         updateUserLoginView();
     }
-    else if (currentPage == pageNumber[1]) {
+    else if (currentPage == pageNumber[2]) {
         updateUserProfileView();
     }
-    else if (currentPage == pageNumber[2]) {
+    else if (currentPage == pageNumber[1]) {
         updateRegisterView();
     }
     else if (currentPage == pageNumber[3]) {
