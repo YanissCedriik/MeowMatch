@@ -27,6 +27,6 @@ function changeView() {
 }
 
 function goToProfile(){
-    model.app.currentPage = model.app.pages[1];
+    model.app.currentPage = model.app.pages[2];
     changeView();
 }

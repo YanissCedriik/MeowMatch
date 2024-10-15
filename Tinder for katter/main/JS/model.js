@@ -10,7 +10,7 @@ const model = {
       "chatInboxPage",
       "chatRoomPage",
       "adminPage",],
-    currentPage: 'adminPage',
+    currentPage: 'userLoginPage',
   },// app Syntax
 
 
@@ -23,8 +23,8 @@ const model = {
     },//loginInputs Syntax
 
     profile: {
-      selectedUser: 0,
-      selectedMatch: 0,
+      selectedUser: null,
+      selectedMatch: null,
     },
 
     registerUser: {
@@ -54,17 +54,16 @@ const model = {
   
   data: {
   
-    users: {
-
-    males:
-    {
-        ID: 0,
+    users: [
+        {
+        Id: 0,
         username: "Rogermann",
         password: "eksempelpassord",
         email: "roger@gmail.com",
         isAdmin: false,
         owner: null,
-        
+        isFemale: false,
+
         name: "Roger",
         gender: "male",
         age: 34,
@@ -78,19 +77,19 @@ const model = {
         userIMG: "/Assets/Boycats/boycat1.webp",
         userIMGSProfile: ["IMG1","IMG2","IMG3","IMG4"],
         messagePrompts: ['Hei', ], 
-    },
-        
+
+        },
 
     //Males Syntax
    
-    females: 
         {
-            ID: 1,
+            Id: 1,
             username: "sophia92",
             password: "password123",
             email: "sophia92@example.com",
             isAdmin: false,
             owner: null,
+            isFemale: true,
             
             name: "Sophia Johnson",
             gender: "female",
@@ -105,16 +104,13 @@ const model = {
             userIMG: "/Assets/Gircats/girlcat1.webp",
             userIMGSProfile: ["IMG1","IMG2","IMG3","IMG4"],
             messagePrompts: ["What's your favorite book?", "Tell me about your last adventure."],
-        },
-        
+      },
     
     // Females Syntax
-
-    },//Users Syntax
+      ],//Users Syntax
   
 
     },//Data Syntax
 
 
-
-};//Model Syntax
+  }//Model Syntax
