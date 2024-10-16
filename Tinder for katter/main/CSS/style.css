@@ -462,6 +462,7 @@ footer button:hover img {
 .mainContainerProfile img:hover{
     opacity: .8;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .innercardProfile {
