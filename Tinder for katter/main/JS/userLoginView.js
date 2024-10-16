@@ -10,4 +10,3 @@ function updateUserLoginView(){
     </div>
     `
 }
-

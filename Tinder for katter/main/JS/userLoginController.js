@@ -4,7 +4,7 @@ function findUserNamePassword() {
     let user = findUsers(inputUserName, inputUserPassword);
     if (user) {
         model.input.profile.selectedUser = user.Id;
-        console.log("login ok. userId:", user.Id);
+        console.log("login ok. selectedUserId:", user.Id);
         goToProfile();
     }
     else {

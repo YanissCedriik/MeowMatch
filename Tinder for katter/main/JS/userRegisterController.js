@@ -1,3 +1,61 @@
-function registerNewUser(){
-    //register new user, fill in form and create new user.
+
+function findIndexUser(username) {
+    console.log("username:", username);
+    for (let userIndex = 0; userIndex < model.data.users.length; userIndex++) {
+        let indexOfUser = model.data.users[userIndex].username;
+        if (indexOfUser === username) {
+            return userIndex;
+        }
+    }
+    return null;
+
+}
+function registerNewUser() {
+    let foundUser = findIndexUser(model.input.registerUser.username);
+    if (model.input.registerUser.password === model.input.registerUser.passwordConfirm) {
+        if (foundUser === null) {
+            let regUser = {
+                Id: model.data.users.length,
+                username: model.input.registerUser.username,
+                password: model.input.registerUser.password,
+                email: model.input.registerUser.email,
+                isAdmin: false,
+                owner: null,
+                showWoman: model.input.registerUser.showWoman,
+                showMen: model.input.registerUser.showMen,
+
+                name: model.input.registerUser.name,
+                gender: model.input.registerUser.gender,
+                location: model.input.registerUser.location,
+                age: model.input.registerUser.age,
+
+                bio: '',
+                interests: [],
+                mcClub: '',
+
+                userIMG: '',
+                userIMGSProfile: [],
+            };
+            model.data.users.push(regUser);
+
+            console.log("id pushed:", model.data.users.length);
+            console.log("username pushed:", model.input.registerUser.username);
+            console.log("pass pushed:", model.input.registerUser.password);
+            console.log("email pushed:", model.input.registerUser.email);
+            console.log("showWoman pushed: ", model.input.registerUser.showWoman);
+            console.log("showMen pushed: ", model.input.registerUser.showMen);
+            console.log("location pushed:", model.input.registerUser.location);
+            console.log("age pushed:", model.input.registerUser.age);
+
+
+            console.log("object pushed:", regUser);
+            console.log("registration complete!")
+            goToLogOut();
+        } else {
+            console.log("failed registration, same username")
+        }
+    } else {
+        console.log("pass dont match")
+    }
+
 }
