@@ -459,6 +459,11 @@ footer button:hover img {
     padding: 20px;
 }
 
+.mainContainerProfile img:hover{
+    opacity: .8;
+    transition: all 0.3s;
+}
+
 .innercardProfile {
     width: 100%;
     max-width: 100vw; 
