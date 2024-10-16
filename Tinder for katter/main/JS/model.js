@@ -10,7 +10,7 @@ const model = {
       "chatInboxPage",
       "chatRoomPage",
       "adminPage",],
-    currentPage: 'chatInboxPage',
+    currentPage: 'userLoginPage',
   },// app Syntax
 
 
