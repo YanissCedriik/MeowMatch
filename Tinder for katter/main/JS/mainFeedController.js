@@ -8,4 +8,7 @@ function randomPotentialMatches(){
     //
 }
 
-
+function goToMainFeed(){
+    model.app.currentPage = model.app.pages[3];
+    changeView();
+}
