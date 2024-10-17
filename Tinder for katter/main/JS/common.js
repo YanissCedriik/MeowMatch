@@ -23,26 +23,4 @@ function changeView() {
     else if (currentPage == pageNumber[6]) {
         updateAdminView();
     }
-
-}
-
-
-function goToLogOut(){
-    model.app.currentPage = model.app.pages[0];
-    changeView();
-}
-function goToProfile(){
-    model.app.currentPage = model.app.pages[2]
-    changeView();
-}
-
-
-function goToMainFeed(){
-    model.app.currentPage = model.app.pages[3];
-    changeView();
-}
-
-function goToMatches(){
-    model.app.currentPage = model.app.pages[4];
-    changeView();
 }

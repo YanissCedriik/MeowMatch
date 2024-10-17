@@ -20,17 +20,11 @@ function findUsers(inputUserName, inputUserPassword) {
         if (currentUser.username === inputUserName && currentUser.password === inputUserPassword) {
             return currentUser;
         }
-
     }
     return null
 }
 
-function getValueUsername(valueUsername) {
-    model.input.loginUser.username = valueUsername.value;
-    // console.log("username: ", model.input.loginUser.username);
-}
-
-function getValuePassword(valuePassword) {
-    model.input.loginUser.password = valuePassword.value;
-    // console.log("password: ", model.input.loginUser.password);
+function goToLogOut(){
+    model.app.currentPage = model.app.pages[0];
+    changeView();
 }

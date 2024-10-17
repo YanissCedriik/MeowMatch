@@ -1,19 +1,8 @@
-
-function findIndexUser(username) {
-    console.log("username:", username);
-    for (let userIndex = 0; userIndex < model.data.users.length; userIndex++) {
-        let indexOfUser = model.data.users[userIndex].username;
-        if (indexOfUser === username) {
-            return userIndex;
-        }
-    }
-    return null;
-
-}
 function registerNewUser() {
-    let foundUser = findIndexUser(model.input.registerUser.username);
+    let foundUserIndex = findUserIndex();
     if (model.input.registerUser.password === model.input.registerUser.passwordConfirm) {
-        if (foundUser === null) {
+        if (foundUserIndex === null) {
+
             let regUser = {
                 Id: model.data.users.length,
                 username: model.input.registerUser.username,
@@ -47,7 +36,6 @@ function registerNewUser() {
             console.log("location pushed:", model.input.registerUser.location);
             console.log("age pushed:", model.input.registerUser.age);
 
-
             console.log("object pushed:", regUser);
             console.log("registration complete!")
             goToLogOut();
@@ -58,4 +46,16 @@ function registerNewUser() {
         console.log("pass dont match")
     }
 
+}
+
+function findUserIndex() {
+    let inputUsername = model.input.registerUser.username;
+    console.log("username:", inputUsername);
+    for (let userIndex = 0; userIndex < model.data.users.length; userIndex++) {
+        let indexOfUser = model.data.users[userIndex].username;
+        if (indexOfUser === inputUsername) {
+            return userIndex;
+        }
+    }
+    return null;
 }
