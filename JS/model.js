@@ -201,7 +201,7 @@ const model = {
 
         mcClub: "None",
         userIMG: "Assets/Boycats/boycat6.webp",
-        userIMGSProfile: ["Assets/Boycats/boycat6.webp"],
+        userIMGSProfile: ["Assets/Boycats/boycat6.webp","Assets/Misc/placeholderimg.webp","Assets/Misc/placeholderimg.webp","Assets/Misc/placeholderimg.webp",],
       },
       {
         Id: 7,
