@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body onload="changeView()">
+
+    <!---Header --- !!Do not move!!--->
+    <header class="header">
+        <img src="Assets/Logo/38160610.jpg" class="logo">
+        <button onclick="goToLogOut()" class="button"><img src="Assets/Icons/box-arrow-right.svg"></button>
+    </header>
+
+
+
+    <div id="app"></div>
+
+
+
+
+    <!---Footer --- !!Do not move!!--->
+
+    <footer>
+        <button onclick="goToMainFeed()"><img src="Assets/Icons/heart-half.svg"></button>
+        <button onclick="              "><img src="Assets/Icons/grid-3x3-gap-fill.svg"></button>
+        <button onclick="goToMatches()"><img src="Assets/Icons/inbox-fill.svg"></button>
+        <button onclick="goToProfile()"><img
+                src="Assets/Icons/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"></button>
+    </footer>
+
+    
+    <!--Main-->
+    <script src="JS/model.js"></script>
+    <script src="JS/common.js"></script>
+    <script src="JS/mainView.js"></script>
+
+    <!--User Login-->
+    <script src="JS/userLoginController.js"></script>
+    <script src="JS/userLoginView.js"></script>
+
+    <!--User Register-->
+    <script src="JS/userRegisterController.js"></script>
+    <script src="JS/userRegisterView.js"></script>
+
+    <!--User-Profile-->
+    <script src="JS/userProfileController.js"></script>
+    <script src="JS/userProfileView.js"></script>
+
+    <!--Main Feed-->
+    <script src="JS/mainFeedController.js"></script>
+    <script src="JS/mainFeedView.js"></script>
+
+    <!--Chat Inbox-->
+    <script src="JS/chatInboxController.js"></script>
+    <script src="JS/chatInboxView.js"></script>
+
+    <!--Chatroom-->
+    <script src="JS/chatRoomController.js"></script>
+    <script src="JS/chatRoomView.js"></script>
+
+    <!--Admin-->
+    <script src="JS/adminController.js"></script>
+    <script src="JS/adminView.js"></script>
+
+
+</body>
+
+</html>
