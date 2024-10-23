@@ -10,7 +10,7 @@ function updateUserProfileView() {
                 </div>
 
                 <div class="subProfileImages">
-                ${createImgstream()}
+                ${createImagesStreamProfile()}
                 </div>
             </div>
 
@@ -26,7 +26,7 @@ function updateUserProfileView() {
 
             <div><h4>My Interests (Max 8)</h4></div>
             <div class="userSelectedInterests">
-                ${functionInterests()}
+                
             </div>
             
             <h4>Select Interests:</h4>
