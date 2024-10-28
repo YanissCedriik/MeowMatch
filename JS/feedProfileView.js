@@ -2,29 +2,33 @@ function updateFeedProfileView(){
     let html = '';
     html += /*HTML*/ `
 
-    <div>
-        <img src="${model.data.users[model.input.profile.selectedProfileUser].userImages[0]}">
-        <div>${model.data.users[model.input.profile.selectedProfileUser].gender}</div>
-        <div>${model.data.users[model.input.profile.selectedProfileUser].name}</div>
-        <div>${model.data.users[model.input.profile.selectedProfileUser].age}</div>
-    </div>
-    ${createImagesStream()}
-    
-    <div>${model.data.users[model.input.profile.selectedProfileUser].location}</div>
+    <div class="mainContainerFP">
+        <div>
+            <img class="profilePictureFP" src="${model.data.users[model.input.profile.selectedProfileUser].userImages[0]}">
+            <div class="overlayProfilePictureFP">
+                <div>${model.data.users[model.input.profile.selectedProfileUser].age}</div>
+                <div>${model.data.users[model.input.profile.selectedProfileUser].name}</div>
+                <div>${model.data.users[model.input.profile.selectedProfileUser].gender}</div>
+            </div>
+        </div>
+        ${createImagesStream()}
+        
+        <div>${model.data.users[model.input.profile.selectedProfileUser].location}</div>
 
-    ${createInterestedInGender()}
-    
-    <div>
-        <div>Bio</div>
-        ${model.data.users[model.input.profile.selectedProfileUser].bio}
-    </div>
+        ${createInterestedInGender()}
+        
+        <div>
+            <div>Bio</div>
+            ${model.data.users[model.input.profile.selectedProfileUser].bio}
+        </div>
 
-    <div>
-        <div>Hobbyer</div>
-        ${createHobbyList()}
+        <div>
+            <div>Hobbyer</div>
+            ${createHobbyList()}
+        </div>
+        
+        <div>${model.data.users[model.input.profile.selectedProfileUser].mcClub}</div>
     </div>
-    
-    <div>${model.data.users[model.input.profile.selectedProfileUser].mcClub}</div>
     `;
 
     appDiv.innerHTML = html;
