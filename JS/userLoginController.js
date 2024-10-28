@@ -21,7 +21,7 @@ function findUsers(inputUserName, inputUserPassword) {
             return currentUser;
         }
     }
-    return null
+    return null;
 }
 
 function goToLogOut(){

@@ -13,29 +13,27 @@ function goToMainFeed(){
 }
 
 
-
+function determanGenderSelection() {
+    const selectedUser = model.data.users[model.input.profile.selectedUser];
+    if (selectedUser.gender === "male" && selectedUser.showWoman) return femaleUsers;
+    if (selectedUser.gender === "female" && selectedUser.showMen) return maleUsers;
+    return [];
+}
 
 
 
 //selectedGenderArray can be either maleUsers[i] or femaleUsers[i] (based on selectedUser gender-preferance)
 function drawMainFeed(selectedGenderArray) {
     let mainFeedUserHTML = "";
-
-
     
+    selectedGenderArray = determanGenderSelection() 
 
-    if(model.data.users[model.input.profile.selectedUser].gender === "male" && model.data.users[model.input.profile.selectedUser].showWoman === true) {
-        selectedGenderArray = femaleUsers ;
-    }
-    
-    if(model.data.users[model.input.profile.selectedUser].gender === "female" && model.data.users[model.input.profile.selectedUser].showMen === true) {
-        selectedGenderArray = maleUsers ;
-    }
+    console.log(selectedGenderArray)
 
 
 
 
-    for (let i = 0; i < model.data.users.length; i++) {
+    for (let i = 0; i < selectedGenderArray.length; i++) {
         let imgIndexHTML = "";
         let interestIndexHTML = "";
 
