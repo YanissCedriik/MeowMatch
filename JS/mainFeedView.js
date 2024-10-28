@@ -1,27 +1,41 @@
 function updateMainFeedView(){
-    mainFeedPage = /*HTML*/`
-
-    `
-    appDiv.innerHTML = mainFeedPage;
-}
-
-// Id: 1,
-// username: "sophia92",
-// password: "password123",
-// email: "sophia92@example.com",
-// isAdmin: false,
-// owner: null,
-// showWoman: false,
-// showMen: true,
-
-// //name: "Sophia Johnson",
-// gender: "female",
-// location: "Larvik",
-// age: 28,
-
-// bio: "Lover of art and nature. Always seeking adventure!",
-// interests: ["painting", "hiking", "photography", "reading"],
-// mcClub: "Hells Angels",
-
-// userIMG: "/Assets/Gircats/girlcat1.webp",
-// userIMGSProfile: ["IMG1","IMG2","IMG3","IMG4"],
+    const onePerson = showEm();
+    console.log("update oneP:", onePerson)
+    if(!onePerson){
+       appDiv.innerHTML = /*HTML*/ `
+       <div class="mainFeedContainer">
+           <p>There are no users left to display in the feed.</p>
+       </div>
+   `;
+       return;
+    }
+    model.input.profile.selectedProfileUser = onePerson.Id;
+    console.log("onePerson Id:",  model.data.users[model.input.profile.selectedProfileUser])
+    console.log("onePerson updateView:", onePerson);
+       mainFeedPage = /*HTML*/`
+       <div class="mainFeedContainer">
+       <div class="outerCard">
+           <div class="innerCard">
+           <div class="userProfileName"><div onclick="goToFeedProfile()"><span>${onePerson.username}</span></div></div>
+           <div class="userIMG" style="height:100px; width: 100px"><img src="${onePerson.userIMGSProfile[0]}"></div>
+           <div class="imgStream">${imgStreamOnePerson(onePerson)}</div>
+               <div class="userLocation"><img src="Assets/Icons/geo-alt.svg"><span>${onePerson.location}</span></div>
+               <div class="userInterests">${interestsOnePerson(onePerson)}</div>
+               <div class="userBio">${onePerson.bio}</div>
+   
+           </div>
+       </div>
+   
+       <div class="dislikeButton">
+           <img src="Assets/Icons/x.svg" onclick="dislike()">
+       </div>
+   
+       <div class="likeButton">
+           <img src="Assets/Icons/heart-fill.svg" onclick="like()">
+       </div>
+   </div>
+       `
+       appDiv.innerHTML = mainFeedPage;
+   }
+   
+   

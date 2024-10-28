@@ -14,10 +14,10 @@ function updateRegisterView() {
         <input type="number" placeholder="Alder..."onchange="model.input.registerUser.age=this.value"class="input-field">
         <div>Jeg er :</div>
         <label class="radio-label">
-            <input type="radio" value="Mann"name="gender" onchange="model.input.registerUser.gender=this.value">Pusegutt
+            <input type="radio" value="male"name="gender" onchange="model.input.registerUser.gender=this.value">Pusegutt
         </label>
         <label class="radio-label">
-            <input type="radio" value="Dame" name="gender" onchange="model.input.registerUser.gender=this.value">Pusejente
+            <input type="radio" value="female" name="gender" onchange="model.input.registerUser.gender=this.value">Pusejente
         </label>
 
         <input type="text" placeholder="By... "onchange="model.input.registerUser.location=this.value" class="input-field">

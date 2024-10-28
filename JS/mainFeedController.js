@@ -3,154 +3,59 @@ function goToMainFeed(){
     changeView();
 }
 
-
-function drawMatchesMainFeed(){
-    let mainFeedUserHTML = "";
-    let interestIndex = 0;
+function showEm(){
+    selectedUser = model.data.users[model.input.profile.selectedUser];
     
-    for (let i = 0; i < model.data.users.length; i++) {
-        let imgIndexHTML = "";
-        let interestIndexHTML = "";
-        
-        
-        if (model.data.users[i].userIMGSProfile.length > 1){
-           //Bygger profilbilder HTML
-            for (let imgIndex = 0; imgIndex < model.data.users.userIMGSProfile.length; imgIndex++) {  
-                    imgIndexHTML += /*HTML*/ ` <img src="${model.data.users.userIMGSProfile[imgIndex]}">
-                    
-                    `
-              }
-            
-        }
-
-        if(model.data.users[i].interests[interestIndex].length > 1){
-            //Bygger interesser HTML
-            for (let interestIndex = 0; i < model.data.users.interests.length; interestIndex++) {    
-                interestIndexHTML += /*HTML*/ ` <div>${model.data.users.interests[interestIndex]}</div>
-                
-                ` 
-            }
-        }
-          
-        
-        
-        
-        
-        //Legger sammen all HTML
-        mainFeedUserHTML = /*HTML*/ `
-        <div class="mainFeedContainer">
-            <div class="outerCard">
-                <div class="innerCard">
-                    ${imgIndexHTML}
-                    <div class="userProfileName"> <span>${model.data.users[i].age}</span></div>
-                    <div class="userLocation"><img src="Assets/Icons/geo-alt.svg"><span>${model.data.users[i].location}</span></div>
-                    <div class="userInterests">${interestIndexHTML}</div>
-                    <div class="userBio">${model.data.users[i].bio}</div>
-                </div>
-            </div>
-
-            <div class="dislikeButton">
-                <img src="Assets/Icons/x.svg">
-            </div>
-
-            <div class="likeButton">
-                <img onclick="likeButton()" src="Assets/Icons/heart-fill.svg">
-            </div>
-        </div>
-
-    `}  return mainFeedUserHTML;
+    let personArray = filterMenWomen();
+    personArray = personArray.filter(user => !selectedUser.liked.includes(user.Id) && !selectedUser.disliked.includes(user.Id));
+    console.log("personarray:", personArray)
+    let randomNum = Math.floor(Math.random()*personArray.length)
+    console.log("randomNum:", randomNum)
+    let foundPerson = personArray[randomNum];
+    console.log("foundPerson:", foundPerson);
+    return foundPerson;
 }
 
-
-
-
-
-
-
-// Chat GPT sier:
-
-function drawMatchesMainFeed() {
-    let mainFeedUserHTML = "";
-
-    for (let i = 0; i < model.data.users.length; i++) {
-        let imgIndexHTML = ""; // Reset for each user
-        let interestIndexHTML = ""; // Reset for each user
-
-        // Build profile images HTML
-        if (model.data.users[i].userIMGSProfile.length > 1) {
-            for (let imgIndex = 0; imgIndex < model.data.users[i].userIMGSProfile.length; imgIndex++) {
-                imgIndexHTML += /* HTML */ `<img src="${model.data.users[i].userIMGSProfile[imgIndex]}">`;
-            }
-        }
-
-        // Build interests HTML
-        if (model.data.users[i].interests.length > 0) {
-            for (let interestIndex = 0; interestIndex < model.data.users[i].interests.length; interestIndex++) {
-                interestIndexHTML += /* HTML */ `<div>${model.data.users[i].interests[interestIndex]}</div>`;
-            }
-        }
-
-        // Append user HTML to mainFeedUserHTML
-        mainFeedUserHTML += /* HTML */ `
-        <div class="mainFeedContainer">
-            <div class="outerCard">
-                <div class="innerCard">
-                    ${imgIndexHTML}
-                    <div class="userProfileName"><span>${model.data.users[i].age}</span></div>
-                    <div class="userLocation"><img src="Assets/Icons/geo-alt.svg"><span>${model.data.users[i].location}</span></div>
-                    <div class="userInterests">${interestIndexHTML}</div>
-                    <div class="userBio">${model.data.users[i].bio}</div>
-                </div>
-            </div>
-
-            <div class="dislikeButton">
-                <img src="Assets/Icons/x.svg">
-            </div>
-
-            <div class="likeButton">
-                <img onclick="likeButton()" src="Assets/Icons/heart-fill.svg">
-            </div>
-        </div>
-        `;
+function filterMenWomen() {
+    if(model.data.users[model.input.profile.selectedUser].gender === 'male'){
+    return model.data.users.filter(user => user.showMen);
     }
-
-    // Return or use the generated HTML as needed
-    return mainFeedUserHTML; // Example of returning the HTML
+    if(model.data.users[model.input.profile.selectedUser].gender === 'female'){
+        return model.data.users.filter(user => user.showWoman);
+    }
 }
 
+function interestsOnePerson(onePerson){
+    console.log("oneP2:", onePerson);
+    let interestHtml = '';
+    for(let interestIndex = 0; interestIndex < onePerson.interests.length; interestIndex++){
+        interestHtml += /*HTML*/ `
+        ${onePerson.interests[interestIndex]}, `;
+    }
+    return interestHtml;
+}
 
+function imgStreamOnePerson(onePerson){
+    console.log("oneP3:", onePerson);
+    let imgStreamHtml = '';
+    for(let imgIndex = 1; imgIndex < onePerson.userIMGSProfile.length; imgIndex++){
+        imgStreamHtml += /*HTML*/ `
+        <div style ="height: 50px; width: 50px;"><img src="${onePerson.userIMGSProfile[imgIndex]}"></div>`;
+    }
+    return imgStreamHtml;
+}
 
+function like(){
+model.data.users[model.input.profile.selectedUser].liked.push(model.input.profile.selectedProfileUser);
+console.log("liked:", model.input.profile.selectedProfileUser);
+console.log("liked array:", model.data.users[0].liked)
+updateMainFeedView();
+}
 
+function dislike(){
 
-
-<div class="mainFeedContainer">
-<div class="outerCard">
-    <div class="innerCard">
-        <img src="${model.data.users[i].userIMG}">
-        <div class="userProfileName"> <span>${model.data.users[i].age}</span></div>
-        <div class="userLocation"><img src="Assets/Icons/geo-alt.svg"><span>${model.data.users[i].location}</span></div>
-        <div class="userInterests">${interestHtml}</div>
-        <div class="userBio">${model.data.users[i].bio}</div>
-    </div>
-</div>
-
-<div class="dislikeButton">
-    <img src="Assets/Icons/x.svg">
-</div>
-
-<div class="likeButton">
-    <img onclick="likeButton()" src="Assets/Icons/heart-fill.svg">
-</div>
-</div>
-
-
-
-
-
-//Hvis arrayet inneholder mer enn 1 punkt. Sjekk resten av arrayet.
-
-// 1. Lage kopi av model.data.users
-// 2. Sortere model.data.user i kjønn  mann || kvinne
-// 3. Printe ut model.data.users i mainfeed
-// 4. Legg til en funksjon som gjør at når du liker blir index +1
-// 5. Når du liker en bruker pusher du brukeren inn i inboxView og slicer vekk fra arrayet som vises i mainFeed.
+model.data.users[model.input.profile.selectedUser].disliked.push(model.input.profile.selectedProfileUser);
+console.log("disliked:", model.input.profile.selectedProfileUser);
+updateMainFeedView();
+    
+}
