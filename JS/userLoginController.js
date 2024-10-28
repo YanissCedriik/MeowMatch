@@ -16,12 +16,12 @@ function findUserNamePassword() {
 function findUsers(inputUserName, inputUserPassword) {
     for (let index = 0; index < model.data.users.length; index++) {
         let currentUser = model.data.users[index];
-        // console.log("current user: ", currentUser.username);
+        console.log("current user: ", currentUser.username);
         if (currentUser.username === inputUserName && currentUser.password === inputUserPassword) {
             return currentUser;
         }
     }
-    return null
+    return null;
 }
 
 function goToLogOut(){

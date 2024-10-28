@@ -45,9 +45,9 @@ function createInterestedInGender(){
     let prefer = model.data.users[model.input.profile.selectedProfileUser].showMen;
 
     if (prefer == true){
-        createInterestedInGenderHtml += /*HTML*/ <span>Interessert i Jentepuser</span>;
+        createInterestedInGenderHtml = /*HTML*/ `<span>Interessert i Jentepuser</span>`;
     }   else{
-        createInterestedInGenderHtml += /*HTML*/ <span>Interessert i Guttepuser</span>;
+        createInterestedInGenderHtml = /*HTML*/ `<span>Interessert i Guttepuser</span>`;
     }
     return createInterestedInGenderHtml;
 }

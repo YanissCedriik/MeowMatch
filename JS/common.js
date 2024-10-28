@@ -1,6 +1,7 @@
 function changeView() {
     let currentPage = model.app.currentPage;
     let pageNumber = model.app.pages;
+    console.log("currentPage:", currentPage);
 
     if (currentPage == pageNumber[0]) {
         updateUserLoginView();
