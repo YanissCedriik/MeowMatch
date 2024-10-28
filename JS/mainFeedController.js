@@ -59,3 +59,8 @@ console.log("disliked:", model.input.profile.selectedProfileUser);
 updateMainFeedView();
     
 }
+
+function goToFeedProfile(){
+    model.app.currentPage = model.app.pages[7];
+    changeView();
+}
