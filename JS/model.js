@@ -77,6 +77,7 @@ const model = {
         owner: null,
         showMen: false,
         showWomen: true,
+        name: "Roger",
 
         gender: "male",
         age: 34,
@@ -101,6 +102,7 @@ const model = {
         owner: null,
         showMen: false,
         showWomen: true,
+        name: "Andreas",
 
         gender: "male",
         age: 28,
@@ -130,6 +132,7 @@ const model = {
         owner: null,
         showMen: true,
         showWomen: false,
+        name: "Emma",
 
         gender: "female",
         age: 25,
@@ -153,6 +156,7 @@ const model = {
         owner: null,
         showMen: true,
         showWomen: false,
+        name: "Anna",
 
         gender: "female",
         age: 30,

@@ -3,7 +3,7 @@ function updateFeedProfileView(){
     html += /*HTML*/ `
 
     <div>
-        <img src="${model.data.users[model.input.profile.selectedProfileUser].userIMG}">
+        <img src="${model.data.users[model.input.profile.selectedProfileUser].userImages[0]}">
         <div>${model.data.users[model.input.profile.selectedProfileUser].gender}</div>
         <div>${model.data.users[model.input.profile.selectedProfileUser].name}</div>
         <div>${model.data.users[model.input.profile.selectedProfileUser].age}</div>
@@ -33,7 +33,7 @@ function updateFeedProfileView(){
 function createImagesStream(){
     let createImagesStreamHtml = '';
     
-    for(let i = 0; i < model.data.users[model.input.profile.selectedProfileUser].userImages.length; i++){
+    for(let i = 1; i < model.data.users[model.input.profile.selectedProfileUser].userImages.length; i++){
         createImagesStreamHtml += /*HTML*/ `
         <div>${model.data.users[model.input.profile.selectedProfileUser].userImages[i]}</div>`;
     }
