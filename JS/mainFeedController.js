@@ -21,7 +21,7 @@ function filterMenWomen() {
     return model.data.users.filter(user => user.showMen);
     }
     if(model.data.users[model.input.profile.selectedUser].gender === 'female'){
-        return model.data.users.filter(user => user.showWoman);
+        return model.data.users.filter(user => user.showWomen);
     }
 }
 

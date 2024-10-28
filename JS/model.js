@@ -44,7 +44,7 @@ const model = {
       location: null,
       age: null,
 
-      showWoman: false,
+      showWomen: false,
       showMen: false,
       userOwner: null,
       bio: "",
@@ -76,7 +76,7 @@ const model = {
         isAdmin: false,
         owner: null,
         showMen: false,
-        showWoman: true,
+        showWomen: true,
 
         gender: "male",
         age: 34,
@@ -100,7 +100,7 @@ const model = {
         isAdmin: false,
         owner: null,
         showMen: false,
-        showWoman: true,
+        showWomen: true,
 
         gender: "male",
         age: 28,
@@ -129,7 +129,7 @@ const model = {
         isAdmin: false,
         owner: null,
         showMen: true,
-        showWoman: false,
+        showWomen: false,
 
         gender: "female",
         age: 25,
@@ -152,7 +152,7 @@ const model = {
         isAdmin: false,
         owner: null,
         showMen: true,
-        showWoman: false,
+        showWomen: false,
 
         gender: "female",
         age: 30,

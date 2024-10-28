@@ -10,7 +10,7 @@ function registerNewUser() {
                 email: model.input.registerUser.email,
                 isAdmin: false,
                 owner: null,
-                showWoman: model.input.registerUser.showWoman,
+                showWomen: model.input.registerUser.showWomen,
                 showMen: model.input.registerUser.showMen,
 
                 name: model.input.registerUser.name,
@@ -31,7 +31,7 @@ function registerNewUser() {
             console.log("username pushed:", model.input.registerUser.username);
             console.log("pass pushed:", model.input.registerUser.password);
             console.log("email pushed:", model.input.registerUser.email);
-            console.log("showWoman pushed: ", model.input.registerUser.showWoman);
+            console.log("showWomen pushed: ", model.input.registerUser.showWomen);
             console.log("showMen pushed: ", model.input.registerUser.showMen);
             console.log("location pushed:", model.input.registerUser.location);
             console.log("age pushed:", model.input.registerUser.age);
