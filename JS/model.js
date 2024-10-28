@@ -10,6 +10,7 @@ const model = {
       "chatInboxPage",
       "chatRoomPage",
       "adminPage",
+      "feedProfilePage"
     ],
     currentPage: "userLoginPage",
   }, // app Syntax
@@ -961,7 +962,7 @@ const model = {
         bio: "Photography lover and traveler.",
         interests: ["Photography", "Travel"],
 
-        mcClub: "None",
+        mcClub: "Sandnes MC-Klubb",
         userIMG: "Assets/Girlcats/girlcat16.webp",
         userIMGSProfile: ["Assets/Girlcats/girlcat16.webp"],
       },
