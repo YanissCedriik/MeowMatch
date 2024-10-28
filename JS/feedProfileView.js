@@ -33,21 +33,21 @@ function updateFeedProfileView(){
 function createImagesStream(){
     let createImagesStreamHtml = '';
     
-    for(let i = 0; i < model.data.users[model.input.profile.selectedProfileUser].userIMGSProfile.length; i++){
+    for(let i = 0; i < model.data.users[model.input.profile.selectedProfileUser].userImages.length; i++){
         createImagesStreamHtml += /*HTML*/ `
-        <div>${model.data.users[model.input.profile.selectedProfileUser].userIMGSProfile[i]}</div>`;
+        <div>${model.data.users[model.input.profile.selectedProfileUser].userImages[i]}</div>`;
     }
     return createImagesStreamHtml;
 }
 
 function createInterestedInGender(){
     let createInterestedInGenderHtml = '';
-    let prefer = model.data.users[model.input.profile.selectedProfileUser].showMen;
+    let preferGender = model.data.users[model.input.profile.selectedProfileUser].showMen;
 
-    if (prefer == true){
-        createInterestedInGenderHtml = /*HTML*/ `<span>Interessert i Jentepuser</span>`;
-    }   else{
+    if (preferGender == true){
         createInterestedInGenderHtml = /*HTML*/ `<span>Interessert i Guttepuser</span>`;
+    }   else{
+        createInterestedInGenderHtml = /*HTML*/ `<span>Interessert i Jentepuser</span>`;
     }
     return createInterestedInGenderHtml;
 }

@@ -17,7 +17,7 @@ function updateMainFeedView(){
        <div class="outerCard">
            <div class="innerCard">
            <div class="userProfileName"><div onclick="goToFeedProfile()"><span>${onePerson.username}</span></div></div>
-           <div class="userIMG" style="height:100px; width: 100px"><img src="${onePerson.userIMGSProfile[0]}"></div>
+           <div class="userIMG" style="height:100px; width: 100px"><img src="${onePerson.userImages[0]}"></div>
            <div class="imgStream">${imgStreamOnePerson(onePerson)}</div>
                <div class="userLocation"><img src="Assets/Icons/geo-alt.svg"><span>${onePerson.location}</span></div>
                <div class="userInterests">${interestsOnePerson(onePerson)}</div>

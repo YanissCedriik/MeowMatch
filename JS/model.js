@@ -55,7 +55,7 @@ const model = {
       mcClub: "",
 
       userIMG: "",
-      userIMGSProfile: [],
+      userImages: [],
 
       isPrincessCat: false,
       agreedToEULA: true,
@@ -89,7 +89,7 @@ const model = {
         feed: [],
         mcClub: "Hells Angels",
         userIMG: "",
-        userIMGSProfile: ["IMG1", "IMG2", "IMG3", "IMG4"],
+        userImages: ["IMG1", "IMG2", "IMG3", "IMG4"],
       },
       {
         //Male Users
@@ -113,7 +113,7 @@ const model = {
         feed: [],
         mcClub: "Lakselv Bandidos",
         userIMG: "Assets/Boycats/boycat1.webp",
-        userIMGSProfile: ["Assets/Boycats/boycat4.webp","Assets/Boycats/boycat9.webp"],
+        userImages: ["Assets/Boycats/boycat4.webp","Assets/Boycats/boycat9.webp"],
       },
 
 
@@ -142,7 +142,7 @@ const model = {
         feed: [],
         mcClub: "None",
         userIMG: "Assets/Girlcats/girlcat1.webp",
-        userIMGSProfile: ["Assets/Girlcats/girlcat1.webp"],
+        userImages: ["Assets/Girlcats/girlcat1.webp"],
       },
       {
         Id: 3,
@@ -165,7 +165,7 @@ const model = {
         feed: [],
         mcClub: "None",
         userIMG: "Assets/Girlcats/girlcat2.webp",
-        userIMGSProfile: ["Assets/Girlcats/girlcat2.webp"],
+        userImages: ["Assets/Girlcats/girlcat2.webp"],
       },
       ], //Users Syntax
   }, //Data Syntax

@@ -38,9 +38,9 @@ function interestsOnePerson(onePerson){
 function imgStreamOnePerson(onePerson){
     console.log("oneP3:", onePerson);
     let imgStreamHtml = '';
-    for(let imgIndex = 1; imgIndex < onePerson.userIMGSProfile.length; imgIndex++){
+    for(let imgIndex = 1; imgIndex < onePerson.userImages.length; imgIndex++){
         imgStreamHtml += /*HTML*/ `
-        <div style ="height: 50px; width: 50px;"><img src="${onePerson.userIMGSProfile[imgIndex]}"></div>`;
+        <div style ="height: 50px; width: 50px;"><img src="${onePerson.userImages[imgIndex]}"></div>`;
     }
     return imgStreamHtml;
 }

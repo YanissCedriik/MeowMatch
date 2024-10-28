@@ -6,9 +6,9 @@ function goToProfile(){
 function createImagesStreamProfile(){
     let createImagesStreamHtml = '';
     let currentUser = model.data.users[model.input.profile.selectedUser];
-    for(let i = 0; i < model.data.users[model.input.profile.selectedUser].userIMGSProfile.length; i++){
+    for(let i = 0; i < model.data.users[model.input.profile.selectedUser].userImages.length; i++){
         createImagesStreamHtml += /*HTML*/ `
-        <div>${model.data.users[model.input.profile.selectedUser].userIMGSProfile[i]}</div>`;
+        <div>${model.data.users[model.input.profile.selectedUser].userImages[i]}</div>`;
     }
     
         return createImagesStreamHtml;

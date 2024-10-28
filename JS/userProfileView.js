@@ -76,12 +76,12 @@ function updateUserProfileView() {
 
 // function createImgStream() {
 //     let html = '';
-//     for (let index = 0; index < model.users[index].userIMGSProfile.length; index++) {
+//     for (let index = 0; index < model.users[index].userImages.length; index++) {
 //         html += /*HTML*/`
-//         <div>model.users.userIMGSProfile[0]</div>
-//         <div>model.users.userIMGSProfile[1]</div>
-//         <div>model.users.userIMGSProfile[2]</div>
-//         <div>model.users.userIMGSProfile[3]</div>
+//         <div>model.users.userImages[0]</div>
+//         <div>model.users.userImages[1]</div>
+//         <div>model.users.userImages[2]</div>
+//         <div>model.users.userImages[3]</div>
 //         `
 //     }
 //     return html;

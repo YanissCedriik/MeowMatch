@@ -23,7 +23,7 @@ function registerNewUser() {
                 mcClub: '',
 
                 userIMG: '',
-                userIMGSProfile: [],
+                userImages: [],
             };
             model.data.users.push(regUser);
 
