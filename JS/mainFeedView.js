@@ -4,7 +4,7 @@ function updateMainFeedView(){
     if(!onePerson){
        appDiv.innerHTML = /*HTML*/ `
        <div class="mainFeedContainer">
-           <p>There are no users left to display in the feed.</p>
+           <strong>There are no users left to display in the feed.<strong>
        </div>
    `;
        return;
@@ -38,4 +38,22 @@ function updateMainFeedView(){
        appDiv.innerHTML = mainFeedPage;
    }
    
-   
+   function interestsOnePerson(onePerson){
+    console.log("oneP2:", onePerson);
+    let interestHtml = '';
+    for(let interestIndex = 0; interestIndex < onePerson.interests.length; interestIndex++){
+        interestHtml += /*HTML*/ `
+        ${onePerson.interests[interestIndex]}, `;
+    }
+    return interestHtml;
+}
+
+function imgStreamOnePerson(onePerson){
+    console.log("oneP3:", onePerson);
+    let imgStreamHtml = '';
+    for(let imgIndex = 1; imgIndex < onePerson.userImages.length; imgIndex++){
+        imgStreamHtml += /*HTML*/ `
+        <div style ="height: 50px; width: 50px;"><img src="${onePerson.userImages[imgIndex]}"></div>`;
+    }
+    return imgStreamHtml;
+}
