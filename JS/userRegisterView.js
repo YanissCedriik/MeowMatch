@@ -28,7 +28,7 @@ function updateRegisterView() {
                 <span>Pusegutter</span>
             </label>
             <label class="checkbox-label">
-                <input type="checkbox" class="styled-checkbox" id="women" onchange="model.input.registerUser.showWoman=this.checked">
+                <input type="checkbox" class="styled-checkbox" id="women" onchange="model.input.registerUser.showWomen=this.checked">
                 <span>Pusejenter</span>
             </label>
         </div>

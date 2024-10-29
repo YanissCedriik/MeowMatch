@@ -2,29 +2,33 @@ function updateFeedProfileView(){
     let html = '';
     html += /*HTML*/ `
 
-    <div>
-        <img src="${model.data.users[model.input.profile.selectedProfileUser].userIMG}">
-        <div>${model.data.users[model.input.profile.selectedProfileUser].gender}</div>
-        <div>${model.data.users[model.input.profile.selectedProfileUser].name}</div>
-        <div>${model.data.users[model.input.profile.selectedProfileUser].age}</div>
-    </div>
-    ${createImagesStream()}
-    
-    <div>${model.data.users[model.input.profile.selectedProfileUser].location}</div>
+    <div class="mainContainerFP">
+        <div>
+            <img class="profilePictureFP" src="${model.data.users[model.input.profile.selectedProfileUser].userImages[0]}">
+            <div class="overlayProfilePictureFP">
+                <div>${model.data.users[model.input.profile.selectedProfileUser].age}</div>
+                <div>${model.data.users[model.input.profile.selectedProfileUser].name}</div>
+                <div>${model.data.users[model.input.profile.selectedProfileUser].gender}</div>
+            </div>
+        </div>
+        ${createImagesStream()}
+        
+        <div>${model.data.users[model.input.profile.selectedProfileUser].location}</div>
 
-    ${createInterestedInGender()}
-    
-    <div>
-        <div>Bio</div>
-        ${model.data.users[model.input.profile.selectedProfileUser].bio}
-    </div>
+        ${createInterestedInGender()}
+        
+        <div>
+            <div>Bio</div>
+            ${model.data.users[model.input.profile.selectedProfileUser].bio}
+        </div>
 
-    <div>
-        <div>Hobbyer</div>
-        ${createHobbyList()}
+        <div>
+            <div>Hobbyer</div>
+            ${createHobbyList()}
+        </div>
+        
+        <div>${model.data.users[model.input.profile.selectedProfileUser].mcClub}</div>
     </div>
-    
-    <div>${model.data.users[model.input.profile.selectedProfileUser].mcClub}</div>
     `;
 
     appDiv.innerHTML = html;
@@ -33,21 +37,21 @@ function updateFeedProfileView(){
 function createImagesStream(){
     let createImagesStreamHtml = '';
     
-    for(let i = 0; i < model.data.users[model.input.profile.selectedProfileUser].userIMGSProfile.length; i++){
+    for(let i = 1; i < model.data.users[model.input.profile.selectedProfileUser].userImages.length; i++){
         createImagesStreamHtml += /*HTML*/ `
-        <div>${model.data.users[model.input.profile.selectedProfileUser].userIMGSProfile[i]}</div>`;
+        <div>${model.data.users[model.input.profile.selectedProfileUser].userImages[i]}</div>`;
     }
     return createImagesStreamHtml;
 }
 
 function createInterestedInGender(){
     let createInterestedInGenderHtml = '';
-    let prefer = model.data.users[model.input.profile.selectedProfileUser].showMen;
+    let preferGender = model.data.users[model.input.profile.selectedProfileUser].showMen;
 
-    if (prefer == true){
-        createInterestedInGenderHtml = /*HTML*/ `<span>Interessert i Jentepuser</span>`;
-    }   else{
+    if (preferGender == true){
         createInterestedInGenderHtml = /*HTML*/ `<span>Interessert i Guttepuser</span>`;
+    }   else{
+        createInterestedInGenderHtml = /*HTML*/ `<span>Interessert i Jentepuser</span>`;
     }
     return createInterestedInGenderHtml;
 }

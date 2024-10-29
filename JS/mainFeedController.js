@@ -1,34 +1,46 @@
-let maleUsers = [];
-let femaleUsers = [];
-filterByGender()
+function goToMainFeed(){
+    model.app.currentPage = model.app.pages[3];
+    changeView();
+}
 
-// 1. Lage kopi av model.data.users
-// 2. Sortere model.data.user i kjønn  mann || kvinne
-// 3. Printe ut model.data.users i mainfeed
-// 4. Legg til en funksjon som gjør at når du liker blir index +1
-// 5. Når du liker en bruker pusher du brukeren inn i inboxView og slicer vekk fra arrayet som vises i mainFeed.
-
-
-function filterByGender(){
-       
+function showEm(){
+    selectedUser = model.data.users[model.input.profile.selectedUser];
     
-    for (let i = 0; i < model.data.users.length; i++) {   
-    
-        // Checks if user is male
-        if(model.data.users[i].gender === "male"){
-            maleUsers.push(model.data.users[i])
-        }
-    
-        // Checks if user is female
-        if(model.data.users[i].gender === "female"){
-            femaleUsers.push(model.data.users[i])
-        }
-    };
-   
-    // Makes 2 copies of model.data.users (maleUsers && femaleUsers)
-    return {
-        maleUsers : maleUsers,
-        femaleUsers : femaleUsers,
-    };
+    let personArray = filterMenWomen();
+    personArray = personArray.filter(user => !selectedUser.liked.includes(user.Id) && !selectedUser.disliked.includes(user.Id));
+    console.log("personarray:", personArray)
+    let randomNum = Math.floor(Math.random()*personArray.length)
+    console.log("randomNum:", randomNum)
+    let foundPerson = personArray[randomNum];
+    console.log("foundPerson:", foundPerson);
+    return foundPerson;
+}
 
+function filterMenWomen() {
+    if(model.data.users[model.input.profile.selectedUser].gender === 'male'){
+    return model.data.users.filter(user => user.showMen);
+    }
+    if(model.data.users[model.input.profile.selectedUser].gender === 'female'){
+        return model.data.users.filter(user => user.showWomen);
+    }
+}
+
+function like(){
+model.data.users[model.input.profile.selectedUser].liked.push(model.input.profile.selectedProfileUser);
+console.log("liked:", model.input.profile.selectedProfileUser);
+console.log("liked array:", model.data.users[0].liked)
+updateMainFeedView();
+}
+
+function dislike(){
+
+model.data.users[model.input.profile.selectedUser].disliked.push(model.input.profile.selectedProfileUser);
+console.log("disliked:", model.input.profile.selectedProfileUser);
+updateMainFeedView();
+    
+}
+
+function goToFeedProfile(){
+    model.app.currentPage = model.app.pages[7];
+    changeView();
 }
