@@ -89,7 +89,7 @@ const model = {
         disliked: [],
         feed: [],
         mcClub: "Hells Angels",
-        userIMG: "",
+        userIMG: "Assets/Roger IMGS/1.png",
         userImages: ["Assets/Roger IMGS/1.png", "Assets/Roger IMGS/2.png", "Assets/Roger IMGS/3.png", "Assets/Roger IMGS/4.png"],
       },
       {
