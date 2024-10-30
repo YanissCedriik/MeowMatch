@@ -73,7 +73,7 @@ const model = {
         username: "Roger",
         password: "123",
         email: "roger@gmail.com",
-        isAdmin: false,
+        isAdmin: true,
         owner: null,
         showMen: false,
         showWomen: true,

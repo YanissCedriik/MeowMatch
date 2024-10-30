@@ -29,7 +29,7 @@ function updateMainFeedView(){
        <div class="dislikeButton">
            <img src="Assets/Icons/x.svg" onclick="dislike()">
        </div>
-   
+        ${isAdmin()}
        <div class="likeButton">
            <img src="Assets/Icons/heart-fill.svg" onclick="like()">
        </div>
@@ -56,4 +56,15 @@ function imgStreamOnePerson(onePerson){
         <div style ="height: 50px; width: 50px;"><img src="${onePerson.userImages[imgIndex]}"></div>`;
     }
     return imgStreamHtml;
+}
+function isAdmin(){
+if(!model.data.users[model.input.profile.selectedUser].isAdmin){
+        return '';}
+if(model.data.users[model.input.profile.selectedUser].isAdmin){
+    let banBtn = '';
+    banBtn = /*HTML*/ `
+    <button onclick="banUser()">Ban user</button>`;
+    return banBtn;
+}
+
 }
