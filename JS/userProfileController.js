@@ -6,7 +6,7 @@ function goToProfile() {
 function createImagesStreamProfile() {
     let createImagesStreamHtml = '';
     let currentUser = model.data.users[model.input.profile.selectedUser];
-    for (let i = 0; i < currentUser.userImages.length; i++) {
+    for (let i = 1; i < currentUser.userImages.length; i++) {
         createImagesStreamHtml += /*HTML*/ `
         <img src="${model.data.users[model.input.profile.selectedUser].userImages[i]}">`;
     }
@@ -20,7 +20,7 @@ function createChosenInterests() {
     let currentUser = model.data.users[model.input.profile.selectedUser];
     for (let i = 0; i < currentUser.interests.length; i++) {
         createSelectedInterests += /*HTML*/ `
-        <button>${currentUser.interests[i]}</button>
+        <button onclick="removeInterest(this.value)">${currentUser.interests[i]}</button>
         `;
     }
 
@@ -46,9 +46,15 @@ if (chosenInterests.includes(interest) ){
     console.log("allerede valgt")
     return
 }
+    chosenInterests.push(interest)
 }
 
+function removeInterest(interest) {
+    let chosenInterests = model.data.users[model.input.profile.selectedUser].interests
 
-function removeInterest() {
+    if (chosenInterests.includes(interest)){
+        chosenInterests=chosenInterests.filter(i=> i !==interest);
+        model.data.users[model.input.profile.selectedUser].interests = chosenInterests
+    }
 
 }
