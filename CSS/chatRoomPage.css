@@ -61,7 +61,7 @@
 
 
 .messages div:nth-child(odd) {
-    background-color: #ffffff; /* Light green for user messages */
+    background-color: #ffffff;
     align-self: flex-end;
     color: #000F08;
     

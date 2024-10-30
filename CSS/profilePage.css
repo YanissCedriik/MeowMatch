@@ -1,10 +1,12 @@
 .mainContainerProfile {
     position: absolute;
-    left: 16vw;
-    top:4vh;
+    max-width: 90%;
+
+    top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: translate(-50%, -10%);
     padding: 20px;
 }
 
@@ -16,7 +18,7 @@
 
 .innercardProfile {
     width: 100%;
-    max-width: 100vw; 
+    max-width: 90vw; 
     background-color: #011b0f; 
     border-radius: 24px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -29,26 +31,23 @@
     margin-bottom: 20px;
 }
 
-.mainProfileImage {
-    flex: 1; 
-}
 
 .mainProfileImage img {
-    width: 300px; 
+    width: 15vw; 
     height: auto;
     border-radius: 10px;
 }
 
 .subProfileImages {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
     gap: 10px;
     margin-left: 15px;
 }
 
 .subProfileImages img {
-    width: 100%;
-    height: 143px;
+    width: 7.2vw;
+    height: auto;
     border-radius: 10px;
 }
 
