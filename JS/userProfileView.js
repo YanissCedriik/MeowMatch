@@ -17,8 +17,8 @@ function updateUserProfileView() {
 
             <div class="userBio">
                 <h4>Bio</h4>
-                <div>${currentUser.bio}</div>
-                <input type="text" placeholder="Tell us about yourself" class="bioInput">
+                
+                <input type="text" placeholder="${currentUser.bio}" class="bioInput">
             </div>
 
             <div class="userClub">
@@ -48,11 +48,7 @@ function updateUserProfileView() {
                 <button onclick=addInterest(this.innerText)>FurryBallin'</button>
             </div>
                
-                
-                
-               
-                
-              
+                         
         </div>
     </div>
 
@@ -62,56 +58,3 @@ function updateUserProfileView() {
     `
     appDiv.innerHTML = userProfilePage;
 }
-
-// function createImgStream() {
-//     let html = '';
-//     for (let index = 0; index < model.users[index].userImages.length; index++) {
-//         html += /*HTML*/`
-//         <div>model.users.userImages[0]</div>
-//         <div>model.users.userImages[1]</div>
-//         <div>model.users.userImages[2]</div>
-//         <div>model.users.userImages[3]</div>
-//         `
-//     }
-//     return html;
-// }
-
-// function createBio() {
-//     let html = '';
-//     for (let index = 0; model.users[index]) { }
-// }
-
-// <div class="selectInterests">
-{/* <button>"Cats" (the musical)</button>
-<button>Riding Motorcycles</button>
-<button>Bike Rallies</button>
-<button>Selfie Sessions</button>
-<button>Customizing Bikes</button>
-<button>Chasing Laser Pointers</button>
-<button>Catnip Rallies</button>
-<button>"My Cat from Hell"</button>
-<button>Photography</button>
-<button>Music</button>
-<button>Milkshake Breaks</button>
-<button>Paw-some Wheelies</button>
-<button>Surfing</button>
-<button>Bad Cat Poses</button>
-<button>Gourmet Cat Treats</button>
-<button>"The Office"</button>
-<button>Fastest Lick Contest</button>
-<button>Revving</button>
-<button>Traveling</button>
-<button>Purring</button>
-<button>Gaming</button>
-<button>Movies</button>
-<button>"Puss in Boots"</button>
-<button>Netflix</button>
-<button>Parkour</button>
-<button>Frisbee</button>
-<button>Archery</button>
-<button>Martial Arts</button>
-<button>Dodgeball</button>
-<button>"Catfish"</button>
-<button>Water</button>
-<button>Loud Noises</button>
-</div> */}

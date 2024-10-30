@@ -3,8 +3,8 @@ function findUserNamePassword() {
     let inputUserPassword = model.input.loginUser.password;
     let user = findUsers(inputUserName, inputUserPassword);
     if (user) {
-        model.input.profile.selectedUser = user.Id;
-        console.log("login ok. selectedUserId:", user.Id);
+        model.input.profile.selectedUser = user.id;
+        console.log("login ok. selectedUserId:", user.id);
         goToProfile();
     }
     else {
