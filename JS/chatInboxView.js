@@ -29,7 +29,7 @@ function drawPreviewMatches(){
     
     for (let i = 0; i < selectedUser.liked.length; i++) {   
         let likedUserId = selectedUser.liked[i];
-        let likedUser = model.data.users.find(user => user.Id === likedUserId);
+        let likedUser = model.data.users.find(user => user.id === likedUserId);
         
         if(likedUser){
         likedPersonHtml += /*HTML*/ `
@@ -48,7 +48,7 @@ function drawPreviewMatchesWithChat(){
     
     for (let i = 0; i < selectedUser.liked.length; i++) {   
         let likedUserId = selectedUser.liked[i];
-        let likedUser = model.data.users.find(user => user.Id === likedUserId);
+        let likedUser = model.data.users.find(user => user.id === likedUserId);
         
         if(likedUser){
             likedPersonAndChatHtml += /*HTML*/ `
