@@ -1,30 +1,54 @@
-function goToProfile(){
+function goToProfile() {
     model.app.currentPage = model.app.pages[2]
     changeView();
 }
 
-function createImagesStreamProfile(){
+function createImagesStreamProfile() {
     let createImagesStreamHtml = '';
     let currentUser = model.data.users[model.input.profile.selectedUser];
-    for(let i = 0; i < model.data.users[model.input.profile.selectedUser].userImages.length; i++){
+    for (let i = 0; i < currentUser.userImages.length; i++) {
         createImagesStreamHtml += /*HTML*/ `
-        <div>${model.data.users[model.input.profile.selectedUser].userImages[i]}</div>`;
+        <div>${currentUser.userImages[i]}</div>`;
+    }
+
+    return createImagesStreamHtml;
+}
+
+
+function createChosenInterests() {
+    let createSelectedInterests = '';
+    let currentUser = model.data.users[model.input.profile.selectedUser];
+    for (let i = 0; i < currentUser.interests.length; i++) {
+        createSelectedInterests += /*HTML*/ `
+        <button>${currentUser.interests[i]}</button>
+        `;
+    }
+
+    return createSelectedInterests ;
+}
+
+
+function createAllInterests() {
+    let createAllInterestsHtml = '';
+    let currentUser = model.data.users[model.input.profile.selectedUser];
+    for (let i = 0; i < currentUser.interestsBox.length; i++) {
+        createAllInterestsHtml += /*HTML*/ `
+        <button onclick="addInterest(this.value)">${currentUser.interestsBox[i]} </button>`;
     }
     
-        return createImagesStreamHtml;
-    }
-//Interests, det er 8 "aktive" og en stor liste av kandiater, når man trykker på en fra master-lista slottes den inn i aktive fra 1-8
-//Når man klikker på en fra aktive, fjernes den og det åpnes en slot. Når det er valgt 8 valg, skal det ikke gå å legge til flere.
-//Det blir vel 2 sett med arrays, en for active og en for master-list. Bruker for-løkke til å loope gjennom master-liste til man finner valgt id, pusher da denne til active. 
-//Hvis man fjener fra active vil den da splice den ut. De som er valgt i master-liste bør kanskje være "grået" ut eller lignende, samt gjøre det umulig å velge samme interesse.
+    return createAllInterestsHtml ;
+}
 
-function createChosenInterests () {};
-let createSelectedInterests = '';
-let currentUser=model.data.users[model.input.profile.selectedUser];
-for ( i=0; i < currentUser.interests.length; i++) {
-    createSelectedInterests += /*HTML*/ `
-    
-    
-    `
+function addInterest(interest) {
+let chosenInterests = model.data.users[model.input.profile.selectedUser].interests
 
-};
+if (chosenInterests.includes(interest) ){
+    console.log("allerede valgt")
+    return
+}
+}
+
+
+function removeInterest() {
+
+}
