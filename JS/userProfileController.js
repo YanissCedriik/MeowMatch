@@ -8,7 +8,7 @@ function createImagesStreamProfile(){
     let currentUser = model.data.users[model.input.profile.selectedUser];
     for(let i = 0; i < model.data.users[model.input.profile.selectedUser].userImages.length; i++){
         createImagesStreamHtml += /*HTML*/ `
-        <div>${model.data.users[model.input.profile.selectedUser].userImages[i]}</div>`;
+        <img src="${model.data.users[model.input.profile.selectedUser].userImages[i]}">`;
     }
     
         return createImagesStreamHtml;

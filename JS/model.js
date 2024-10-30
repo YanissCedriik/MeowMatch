@@ -90,7 +90,7 @@ const model = {
         feed: [],
         mcClub: "Hells Angels",
         userIMG: "",
-        userImages: ["IMG1", "IMG2", "IMG3", "IMG4"],
+        userImages: ["Assets/Roger IMGS/1.png", "Assets/Roger IMGS/2.png", "Assets/Roger IMGS/3.png", "Assets/Roger IMGS/4.png"],
       },
       {
         //Male Users

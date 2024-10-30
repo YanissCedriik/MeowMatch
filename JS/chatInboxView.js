@@ -23,48 +23,41 @@ function updateChatInboxView() {
 
 
 function drawPreviewMatches(){
-    let selectedUser = model.data.users[model.input.profile.selectedProfileUser];
+    let selectedUser = model.data.users[model.input.profile.selectedUser];
     let likedPersonHtml = '';
 
     
     for (let i = 0; i < selectedUser.liked.length; i++) {   
-        let likedUser = model.data.users.find(user => user.Id === likedUserId);
         let likedUserId = selectedUser.liked[i];
-        console.log("likedUserId:", likedUserId);
+        let likedUser = model.data.users.find(user => user.Id === likedUserId);
         
-        console.log("likedUser:", likedUser)
         if(likedUser){
         likedPersonHtml += /*HTML*/ `
         
         <img src="${likedUser.userImages[0]}">
-       
-       
         `}
     };
-
      return likedPersonHtml;
 }
 
+
 function drawPreviewMatchesWithChat(){
-    let selectedUser = model.data.users[model.input.profile.selectedProfileUser];
-    let likedPersonAndChatHtml = "";
+    let selectedUser = model.data.users[model.input.profile.selectedUser];
+    let likedPersonAndChatHtml = '';
 
+    
     for (let i = 0; i < selectedUser.liked.length; i++) {   
-        likedPersonAndChatHtml += /*HTML*/ `
+        let likedUserId = selectedUser.liked[i];
+        let likedUser = model.data.users.find(user => user.Id === likedUserId);
         
+        if(likedUser){
+            likedPersonAndChatHtml += /*HTML*/ `
         <div class="chatMatchPreview">
-                    <div class="smallPreviewImage"><img src=${selectedUser.liked[i].userImages[0]}></div>
-                    <span>Name ${selectedUser.liked[i].name}</span>
-                    <div>Last message preview</div>
-                </div>
-        `
-
-     }
-
+            <div class="smallPreviewImage"><img src=${likedUser.userImages[0]}></div>
+            <span>${likedUser.name} : </span>
+            <span> Last message preview</span>
+        </div>
+        `}
+    };
      return likedPersonAndChatHtml;
 }
-
-
-
-
-

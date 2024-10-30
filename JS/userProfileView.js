@@ -6,7 +6,7 @@ function updateUserProfileView() {
 
             <div class="profileImages">
                 <div class="mainProfileImage">
-                    <img src="Assets/Boycats/boycat1.webp">
+                    <img src="${model.data.users[model.input.profile.selectedUser].userImages[0]}">
                 </div>
 
                 <div class="subProfileImages">
