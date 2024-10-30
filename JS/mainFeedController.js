@@ -17,16 +17,18 @@ function showEm(){
 }
 
 function filterMenWomen() {
-    if(model.data.users[model.input.profile.selectedUser].gender === 'male'){
+    selectedUser = model.data.users[model.input.profile.selectedUser];
+    if(selectedUser.gender === 'male'){
     return model.data.users.filter(user => user.showMen);
     }
-    if(model.data.users[model.input.profile.selectedUser].gender === 'female'){
+    if(selectedUser.gender === 'female'){
         return model.data.users.filter(user => user.showWomen);
     }
 }
 
 function like(){
-model.data.users[model.input.profile.selectedUser].liked.push(model.input.profile.selectedProfileUser);
+selectedUser = model.data.users[model.input.profile.selectedUser];
+selectedUser.liked.push(model.input.profile.selectedProfileUser);
 console.log("liked:", model.input.profile.selectedProfileUser);
 console.log("liked array:", model.data.users[0].liked)
 updateMainFeedView();
