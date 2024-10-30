@@ -7,7 +7,7 @@ function showEm(){
     selectedUser = model.data.users[model.input.profile.selectedUser];
     
     let personArray = filterMenWomen();
-    personArray = personArray.filter(user => !selectedUser.liked.includes(user.Id) && !selectedUser.disliked.includes(user.Id));
+    personArray = personArray.filter(user => !selectedUser.liked.includes(user.id) && !selectedUser.disliked.includes(user.id));
     console.log("personarray:", personArray)
     let randomNum = Math.floor(Math.random()*personArray.length)
     console.log("randomNum:", randomNum)

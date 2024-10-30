@@ -9,15 +9,15 @@ function updateMainFeedView(){
    `;
        return;
     }
-    model.input.profile.selectedProfileUser = onePerson.Id;
-    console.log("onePerson Id:",  model.data.users[model.input.profile.selectedProfileUser])
+    model.input.profile.selectedProfileUser = onePerson.id;
+    console.log("onePerson id:",  model.data.users[model.input.profile.selectedProfileUser])
     console.log("onePerson updateView:", onePerson);
        mainFeedPage = /*HTML*/`
        <div class="mainFeedContainer">
        <div class="outerCard">
            <div class="innerCard">
            <div class="userProfileName"><div onclick="goToFeedProfile()"><span>${onePerson.username}</span></div></div>
-           <div class="userIMG" style="height:100px; width: 100px"><img src="${onePerson.userImages[0]}"></div>
+           <div class="userIMG"><img src="${onePerson.userImages[0]}"></div>
            <div class="imgStream">${imgStreamOnePerson(onePerson)}</div>
                <div class="userLocation"><img src="Assets/Icons/geo-alt.svg"><span>${onePerson.location}</span></div>
                <div class="userInterests">${interestsOnePerson(onePerson)}</div>

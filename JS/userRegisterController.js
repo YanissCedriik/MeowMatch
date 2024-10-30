@@ -7,7 +7,7 @@ function registerNewUser() {
             if (foundUserIndex === null) {
 
                 let regUser = {
-                    Id: model.data.users.length,
+                    id: model.data.users.length,
                     username: model.input.registerUser.username,
                     password: model.input.registerUser.password,
                     email: model.input.registerUser.email,
