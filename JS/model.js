@@ -19,7 +19,7 @@ const model = {
 
   input: {
     loginUser: {
-      Id: null,
+      id: null,
       username: null,
       password: null,
       logInMesssage: "",
@@ -32,7 +32,7 @@ const model = {
     },
 
     registerUser: {
-      Id: null,
+      id: null,
       username: null,
       password: null,
       passwordConfirm: null,
@@ -69,7 +69,7 @@ const model = {
   data: {
     users: [
       {
-        Id: 0,
+        id: 0,
         username: "Roger",
         password: "123",
         email: "roger@gmail.com",
@@ -94,7 +94,7 @@ const model = {
       },
       {
         //Male Users
-        Id: 1,
+        id: 1,
         username: "Andreas",
         password: "123",
         email: "andreas@getacademy.no",
@@ -124,7 +124,7 @@ const model = {
 
 
       {
-        Id: 2,
+        id: 2,
         username: "Emma",
         password: "123",
         email: "emma.brown@example.com",
@@ -148,7 +148,7 @@ const model = {
         userImages: ["Assets/Girlcats/girlcat1.webp"],
       },
       {
-        Id: 3,
+        id: 3,
         username: "Anna",
         password: "123",
         email: "olivia.williams@example.com",

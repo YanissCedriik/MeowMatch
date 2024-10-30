@@ -1,5 +1,5 @@
 function updateUserLoginView(){
-    document.getElementById('app').innerHTML = /*HTML*/ `
+    loginPage = /*HTML*/ `
     
     <div class="login-container">
         <h1>Velkommen!</h1>
@@ -11,4 +11,6 @@ function updateUserLoginView(){
         <button onclick="updateRegisterView()" class="btn-new">Jeg er ny her</button>
     </div>
     `
+    appDiv.innerHTML = loginPage;
 }
+
