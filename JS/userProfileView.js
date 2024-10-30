@@ -7,7 +7,7 @@ function updateUserProfileView() {
 
             <div class="profileImages">
                 <div class="mainProfileImage">
-                    ${currentUser.userIMG}
+                    <img src="${currentUser.userImages[0]}">
                 </div>
 
                 <div class="subProfileImages">
