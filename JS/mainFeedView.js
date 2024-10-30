@@ -9,15 +9,15 @@ function updateMainFeedView(){
    `;
        return;
     }
-    model.input.profile.selectedProfileUser = onePerson.Id;
-    console.log("onePerson Id:",  model.data.users[model.input.profile.selectedProfileUser])
+    model.input.profile.selectedProfileUser = onePerson.id;
+    console.log("onePerson id:",  model.data.users[model.input.profile.selectedProfileUser])
     console.log("onePerson updateView:", onePerson);
        mainFeedPage = /*HTML*/`
        <div class="mainFeedContainer">
        <div class="outerCard">
            <div class="innerCard">
-           <div onclick="goToFeedProfile()" class="userIMG"><img src="${onePerson.userImages[0]}"></div>
-           <div class="userProfileName"><div><span>${onePerson.username}</span></div></div>
+           <div class="userProfileName"><div onclick="goToFeedProfile()"><span>${onePerson.username}</span></div></div>
+           <div class="userIMG"><img src="${onePerson.userImages[0]}"></div>
            <div class="imgStream">${imgStreamOnePerson(onePerson)}</div>
                <div class="userLocation"><img src="Assets/Icons/geo-alt.svg"><span>${onePerson.location}</span></div>
                <div class="userInterests">${interestsOnePerson(onePerson)}</div>
@@ -29,7 +29,7 @@ function updateMainFeedView(){
        <div class="dislikeButton">
            <img src="Assets/Icons/x.svg" onclick="dislike()">
        </div>
-   
+        ${isAdmin()}
        <div class="likeButton">
            <img src="Assets/Icons/heart-fill.svg" onclick="like()">
        </div>
@@ -56,4 +56,15 @@ function imgStreamOnePerson(onePerson){
         <div style ="height: 50px; width: 50px;"><img src="${onePerson.userImages[imgIndex]}"></div>`;
     }
     return imgStreamHtml;
+}
+function isAdmin(){
+if(!model.data.users[model.input.profile.selectedUser].isAdmin){
+        return '';}
+if(model.data.users[model.input.profile.selectedUser].isAdmin){
+    let banBtn = '';
+    banBtn = /*HTML*/ `
+    <button onclick="banUser()">Ban user</button>`;
+    return banBtn;
+}
+
 }
