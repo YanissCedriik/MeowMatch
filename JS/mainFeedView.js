@@ -28,8 +28,8 @@ function updateMainFeedView(){
    
        <div class="dislikeButton">
            <img src="Assets/Icons/x.svg" onclick="dislike()">
-       </div>
-        ${isAdmin()}
+           </div>
+           ${isAdmin()}
        <div class="likeButton">
            <img src="Assets/Icons/heart-fill.svg" onclick="like()">
        </div>

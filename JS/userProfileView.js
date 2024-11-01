@@ -23,8 +23,8 @@ function updateUserProfileView() {
 
             <div class="userClub">
                 <h4>MC-klubb</h4>
-                <div>${currentUser.mcClub}</div>
-                <input type="text" placeholder="Skriv om din MC-klubb. " class="bioInput">
+
+                <input type="text" placeholder="${currentUser.mcClub}" class="bioInput">
             </div>
 
             
