@@ -54,8 +54,8 @@ function drawPreviewMatchesWithChat(){
             likedPersonAndChatHtml += /*HTML*/ `
         <div class="chatMatchPreview">
             <div class="smallPreviewImage"><img src=${likedUser.userImages[0]}></div>
-            <span>${likedUser.name} : </span>
-            <span> Last message preview</span>
+            <span class="name">${likedUser.name} : </span>
+            <span class="message"> Meeeeeeoooow?</span>
         </div>
         `}
     };

@@ -15,6 +15,7 @@ function findUserNamePassword() {
     }
 }
 
+
 function findUsers(inputUserName, inputUserPassword) {
     for (let index = 0; index < model.data.users.length; index++) {
         let currentUser = model.data.users[index];
@@ -26,11 +27,11 @@ function findUsers(inputUserName, inputUserPassword) {
     return null;
 }
 
+
 function goToLogOut(){
     model.app.currentPage = model.app.pages[0];
     changeView();
 }
-
 
 
 function enterPressLogIn() {
@@ -40,3 +41,4 @@ function enterPressLogIn() {
         }
     });
 }
+
