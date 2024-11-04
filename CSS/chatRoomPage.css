@@ -102,3 +102,8 @@
 .chatInputfield button:hover { 
     background-color: #ff4d6b; 
 }
+
+.perps img{
+    height: 50px;
+    width: 50px;
+}

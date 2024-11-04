@@ -99,7 +99,7 @@ input[type="checkbox"]:checked + .checkbox-label::before {
 
 /* Style for radio buttons */
 input[type="radio"] {
-    display: none;
+    display:none;
 }
 
 .radio-label {

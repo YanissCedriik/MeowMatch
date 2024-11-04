@@ -7,7 +7,7 @@ function showEm(){
     selectedUser = model.data.users[model.input.profile.selectedUser];
     
     let personArray = filterMenWomen();
-    personArray = personArray.filter(user => !selectedUser.liked.includes(user.id) && !selectedUser.disliked.includes(user.id));
+    personArray = personArray.filter(user => !selectedUser.liked.includes(user.id) && !selectedUser.disliked.includes(user.id) && !model.data.adminPage.bannedUser.includes(user.id));
     console.log("personarray:", personArray)
     let randomNum = Math.floor(Math.random()*personArray.length)
     console.log("randomNum:", randomNum)
@@ -38,8 +38,13 @@ function dislike(){
 
 model.data.users[model.input.profile.selectedUser].disliked.push(model.input.profile.selectedProfileUser);
 console.log("disliked:", model.input.profile.selectedProfileUser);
-updateMainFeedView();
-    
+updateMainFeedView();   
+}
+
+function banUser(){
+    model.data.adminPage.bannedUser.push(model.input.profile.selectedProfileUser);
+    console.log("banned:", model.input.profile.selectedProfileUser);
+    updateMainFeedView();
 }
 
 function goToFeedProfile(){
