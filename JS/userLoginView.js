@@ -9,7 +9,9 @@ function updateUserLoginView(){
         </form>
         <button class="btn-signin" onclick="findUserNamePassword()">Logg inn</button>
         <button onclick="updateRegisterView()" class="btn-new">Jeg er ny her</button>
-    </div>
+        ${model.input.loginUser.logInMesssage}
+        </div>
+
     `
     appDiv.innerHTML = loginPage;
 }
