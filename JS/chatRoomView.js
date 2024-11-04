@@ -1,11 +1,11 @@
 function updateChatRoomView() {
-  chatRoomPage = /*HTML*/ `
+    chatRoomPage = /*HTML*/ `
     
     <div class="chatRoomContainer">
     <div class="innerCardChat">
         <div class="matchNameAndImage">
-            <img src="Assets/Girlcats/girlcat12.webp">
-            <span>Placeholder Name</span>
+            <img src="${likedUser.userImages[0]}" >
+            <span>${likedUser.name}</span>
         </div>
 
         <div class="chatBackground">
@@ -25,4 +25,21 @@ function updateChatRoomView() {
     
     `;
   appDiv.innerHTML = chatRoomPage;
+}
+
+
+
+function goToChatRoom(likedUserId) {
+    model.input.profile.selectedMatch = likedUserId;
+    const likedUser = model.data.users.find(user => user.id === likedUserId);
+    
+    
+    if (likedUser) {
+    
+        window.likedUser = likedUser;
+    }
+
+    model.app.currentPage = model.app.pages[5];
+    console.log(likedUserId);
+    changeView();
 }

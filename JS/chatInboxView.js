@@ -34,7 +34,7 @@ function drawPreviewMatches(){
         if(likedUser){
         likedPersonHtml += /*HTML*/ `
         
-        <img src="${likedUser.userImages[0]}">
+        <img onclick="goToChatRoom(${likedUserId})" src="${likedUser.userImages[0]}">
         `}
     };
      return likedPersonHtml;
@@ -52,7 +52,7 @@ function drawPreviewMatchesWithChat(){
         
         if(likedUser){
             likedPersonAndChatHtml += /*HTML*/ `
-        <div class="chatMatchPreview">
+        <div onclick="goToChatRoom(${likedUserId})" class="chatMatchPreview">
             <div class="smallPreviewImage"><img src=${likedUser.userImages[0]}></div>
             <span class="name">${likedUser.name} : </span>
             <span class="message"> Meeeeeeoooow?</span>
