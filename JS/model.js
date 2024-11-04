@@ -87,6 +87,8 @@ const model = {
         interestsBox: ['Martial Arts', 'Riding Motorcycles','Surfing','The Office', 'Gaming','Netflix', 'Parkour', 'FurryBallin',],
         liked: [],
         disliked: [],
+        messages: [],
+
         feed: [],
         mcClub: "Hells Angels",
         userIMG: "Assets/Roger IMGS/1.png",
@@ -112,6 +114,8 @@ const model = {
         interestsBox: ['Martial Arts', 'Riding Motorcycles','Surfing','The Office', 'Gaming','Netflix', 'Parkour', 'FurryBallin',],
         liked: [],
         disliked: [],
+        messages: [],
+
         feed: [],
         mcClub: "Lakselv Bandidos",
         userIMG: "Assets/Boycats/boycat1.webp",
@@ -142,6 +146,8 @@ const model = {
         interestsBox: ['Martial Arts', 'Riding Motorcycles','Surfing','The Office', 'Gaming','Netflix', 'Parkour', 'FurryBallin',],
         liked: [],
         disliked: [],
+        messages: [],
+
         feed: [],
         mcClub: "None",
         userIMG: "Assets/Girlcats/girlcat1.webp",
@@ -166,14 +172,18 @@ const model = {
         interestsBox: ['Martial Arts', 'Riding Motorcycles','Surfing','The Office', 'Gaming','Netflix', 'Parkour', 'FurryBallin',],
         liked: [],
         disliked: [],
+        messages: [],
+
         feed: [],
         mcClub: "None",
         userIMG: "Assets/Girlcats/girlcat2.webp",
         userImages: ["Assets/Girlcats/girlcat2.webp"],
       },
       ], //Users Syntax
+      
       adminPage: {
         bannedUser: [],
-      },
+      
+      },//adminPage Syntax
     }, //Data Syntax
 }; //Model Syntax
