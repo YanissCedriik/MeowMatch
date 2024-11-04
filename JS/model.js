@@ -13,7 +13,7 @@ const model = {
       "adminPage",
       "feedProfilePage"
     ],
-    currentPage: "userLoginPage",
+    currentPage: "adminPage",
   }, // app Syntax
 
 
