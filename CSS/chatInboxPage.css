@@ -56,9 +56,15 @@
 }
 
 /* Name and Last Message Preview */
-.chatMatchPreview span {
+.name {
     font-weight: bold;
     color: #F4FFF8; 
+}
+
+.message{
+    font-weight: 400;
+    color: #d2d2d2;
+    margin-left: 0.5vw;
 }
 
 .chatMatchPreview div {
