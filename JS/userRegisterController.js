@@ -1,51 +1,68 @@
 function registerNewUser() {
-    let regMessage = model.input.registerUser.errorMessage;
     let foundUserIndex = findUserIndex();
     let regUser = model.input.registerUser;
-    if (regUser.username && regUser.password && regUser.email && regUser.name && regUser.gender && regUser.location && regUser.age) {
-        if (model.input.registerUser.password === model.input.registerUser.passwordConfirm) {
-            if (foundUserIndex === null) {
-
-                let regUser = {
-                    id: model.data.users.length,
-                    username: model.input.registerUser.username,
-                    password: model.input.registerUser.password,
-                    email: model.input.registerUser.email,
-                    isAdmin: false,
-                    owner: null,
-                    showWomen: model.input.registerUser.showWomen,
-                    showMen: model.input.registerUser.showMen,
-
-                    name: model.input.registerUser.name,
-                    gender: model.input.registerUser.gender,
-                    location: model.input.registerUser.location,
-                    age: model.input.registerUser.age,
-
-                    bio: '',
-                    interests: [],
-                    mcClub: '',
-
-                    userIMG: '',
-                    userImages: [],
-                };
-                model.data.users.push(regUser);
-
-                console.log("object pushed:", regUser);
-                regMessage = `Registration complete!`;
-                goToLogOut();
-            } else {
-                regMessage = `Username already taken.`;
-                updateRegisterView();
-            }
-        } else {
-            regMessage = `Passwords don't match.`;
-            updateRegisterView();
-        }
-    } else {
-        regMessage = `Fill out every input.`;
+    if (!regUser.username || !regUser.password || !regUser.passwordConfirm || !regUser.email || !regUser.gender || !regUser.location || !regUser.age) {
+        regUser.errorMessage = `Fill out every input.`;
         updateRegisterView();
+        return;
     }
 
+    if (regUser.password !== regUser.passwordConfirm) {
+        regUser.errorMessage = `Passwords don't match.`;
+        updateRegisterView();
+        return;
+    }
+    if (foundUserIndex !== null) {
+        regUser.errorMessage = `Username already taken.`;
+        updateRegisterView();
+        return;
+    }
+
+    let newUser = {
+        id: model.data.users.length,
+        username: regUser.username,
+        password: regUser.password,
+        email: regUser.email,
+        isAdmin: false,
+        owner: null,
+        showWomen: regUser.showWomen,
+        showMen: regUser.showMen,
+
+        name: regUser.name,
+        gender: regUser.gender,
+        location: regUser.location,
+        age: regUser.age,
+
+        bio: '',
+        interests: [],
+        mcClub: '',
+
+        userIMG: '',
+        userImages: [],
+    };
+    console.log("regUsername:", model.input.registerUser.username);
+    console.log("regpass:", model.input.registerUser.password);
+    console.log("regemail:", model.input.registerUser.email);
+    console.log("regshowWomen:", model.input.registerUser.showWomen);
+    console.log("regshowmen:", model.input.registerUser.showMen);
+    console.log("reggender:", model.input.registerUser.gender);
+    console.log("regage:", model.input.registerUser.age);
+    console.log("reglocation:", model.input.registerUser.location);
+    
+
+    model.data.users.push(newUser);
+    regUser.username = '';
+    regUser.password = '';
+    regUser.passwordConfirm = '';
+    regUser.email = '';
+    regUser.name = '';
+    regUser.gender = '';
+    regUser.location = '',
+    regUser.age = '';
+
+    console.log("object pushed:", newUser);
+    regUser.errorMessage = `Registration complete!`;
+    goToLogOut();
 }
 
 function findUserIndex() {

@@ -33,6 +33,7 @@ function updateRegisterView() {
             </label>
         </div>
         <button onclick="registerNewUser()" class="btn-new">Start Swiping</button>
+        <div>${model.input.registerUser.errorMessage}</div>
     </div>
     
 `

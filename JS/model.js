@@ -172,5 +172,8 @@ const model = {
         userImages: ["Assets/Girlcats/girlcat2.webp"],
       },
       ], //Users Syntax
-  }, //Data Syntax
+      adminPage: {
+        bannedUser: [],
+      },
+    }, //Data Syntax
 }; //Model Syntax
