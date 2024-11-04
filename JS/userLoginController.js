@@ -1,3 +1,5 @@
+enterPressLogIn()
+
 function findUserNamePassword() {
     let inputUserName = model.input.loginUser.username;
     let inputUserPassword = model.input.loginUser.password;
@@ -27,4 +29,14 @@ function findUsers(inputUserName, inputUserPassword) {
 function goToLogOut(){
     model.app.currentPage = model.app.pages[0];
     changeView();
+}
+
+
+
+function enterPressLogIn() {
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            findUserNamePassword();
+        }
+    });
 }
