@@ -123,7 +123,7 @@ const model = {
         feed: [],
         mcClub: "Lakselv Bandidos",
         userIMG: "Assets/Boycats/boycat1.webp",
-        userImages: ["Assets/Boycats/boycat4.webp","Assets/Boycats/boycat9.webp"],
+        userImages: ["Assets/Boycats/boycat4.webp","Assets/Boycats/boycat9.webp", "Assets/Boycats/boycat21.webp", "Assets/Boycats/boycat22.webp", "Assets/Boycats/boycat23.webp", "Assets/Boycats/boycat24.webp", "Assets/Boycats/boycat25.webp", "Assets/Boycats/boycat26.webp", "Assets/Boycats/boycat27.webp"],
       },
 
       {
