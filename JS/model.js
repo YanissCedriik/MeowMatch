@@ -13,7 +13,7 @@ const model = {
       "adminPage",
       "feedProfilePage"
     ],
-    currentPage: "adminPage",
+    currentPage: "mainFeedPage",
   }, // app Syntax
 
 
@@ -63,10 +63,14 @@ const model = {
 
     messagesInput: {
       messageToPush: null,
+      messages: [],
     }, //Messages Syntax
   }, //Inputs Syntax
 
   data: {
+
+    chatRooms:[],
+    
     users: [
       {
         id: 0,
@@ -87,7 +91,7 @@ const model = {
         interestsBox: ['Martial Arts', 'Riding Motorcycles','Surfing','The Office', 'Gaming','Netflix', 'Parkour', 'FurryBallin',],
         liked: [],
         disliked: [],
-        messages: [],
+
 
         feed: [],
         mcClub: "Hells Angels",
@@ -105,6 +109,7 @@ const model = {
         showMen: false,
         showWomen: true,
         name: "Andreas",
+        messages: [],
 
         gender: "male",
         age: 28,
@@ -114,7 +119,6 @@ const model = {
         interestsBox: ['Martial Arts', 'Riding Motorcycles','Surfing','The Office', 'Gaming','Netflix', 'Parkour', 'FurryBallin',],
         liked: [],
         disliked: [],
-        messages: [],
 
         feed: [],
         mcClub: "Lakselv Bandidos",
@@ -146,7 +150,6 @@ const model = {
         interestsBox: ['Martial Arts', 'Riding Motorcycles','Surfing','The Office', 'Gaming','Netflix', 'Parkour', 'FurryBallin',],
         liked: [],
         disliked: [],
-        messages: [],
 
         feed: [],
         mcClub: "None",
@@ -172,7 +175,6 @@ const model = {
         interestsBox: ['Martial Arts', 'Riding Motorcycles','Surfing','The Office', 'Gaming','Netflix', 'Parkour', 'FurryBallin',],
         liked: [],
         disliked: [],
-        messages: [],
 
         feed: [],
         mcClub: "None",

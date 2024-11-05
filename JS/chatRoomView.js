@@ -11,12 +11,13 @@ function updateChatRoomView() {
         <div class="chatBackground">
             <div class="messages" id="messages">
                 <!-- Messages displayed here -->
+                ${filterMessages()}
             </div>
         </div>
 
         <div class="chatInputfield">
             <input type="text" id="messageInput" placeholder="Type a message..." />
-            <button id="sendButton">Send</button>
+            <button onclick="sendMessage()">Send</button>
         </div>
         
     

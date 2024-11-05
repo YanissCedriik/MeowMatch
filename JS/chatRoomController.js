@@ -1,39 +1,31 @@
-function showChatMessages(){
-    //show conversations between current user and selected user.
+
+function sendMessage() {
+  let newMessage = {
+    sender: model.data.users[model.input.profile.selectedUser].username,
+    receiver: model.data.users[model.input.profile.selectedMatch].username,
+    text: model.input.messagesInput.messageToPush,
+  };
+  model.data.chatRooms.push(newMessage);
+  // oppdatere view
 }
 
-function sendMessage(){
-    // send message between current user and selescted user.
+function filterMessages() {
+  let currentUser = model.data.users[model.input.profile.selectedUser];
+  let selectedMatch = model.data.users[model.input.profile.selectedMatch];
+
+  let messages = model.data.chatRooms.filter( msg =>
+      (msg.sender === currentUser.username && selectedMatch.username === msg.receiver) ||
+      (msg.receiver === currentUser.username && selectedMatch.username === msg.sender)
+     );
+
+  let messageHTML = "";
+  for (let i = 0; i < messages.length; i++) {
+    let message = messages[i];
+
+    messageHTML += /*HTML*/ `
+        
+    <div> ${message.sender} <span>${message.text}</span></div>
+    `;
+  }
+  return messageHTML;
 }
-
-
-
-//-----------------------Chat GPT sin løsning-----------------------------------
-
-
-//document.getElementById('sendButton').addEventListener('click', function() {
-//    const messageInput = document.getElementById('messageInput');
-//    const messageText = messageInput.value;
-//
-//    if (messageText.trim() !== '') {
-//        // Create a new message element
-//        const messageDiv = document.createElement('div');
-//        messageDiv.textContent = messageText;
-//        
-//        // Add class (user message)
-//        messageDiv.className = 'user-message'; // You can style this in CSS if you want
-
-        // Append the message to the messages container
-//        document.getElementById('messages').appendChild(messageDiv);
-
-        // Clear the input field for next message
-//        messageInput.value = '';
-
-//    }
-// });
-
-// document.getElementById('messageInput').addEventListener('keypress', function(event) {
-//    if (event.key === 'Enter') {
-//        document.getElementById('sendButton').click();
-//    }
-// });
