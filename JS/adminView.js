@@ -1,7 +1,10 @@
 function updateAdminView() {
+
     let bannedUsers = model.data.adminPage.bannedUser;
     adminPage = /*HTML*/`
-    <h1>AdminPage</h1>
+    <h1>Hello ${model.data.users[model.input.profile.selectedUser].username}</h1>
+    <h2>This is your private Cyber-prison</h2>
+    <div>${model.input.loginUser.logInMesssage}</div>
    <div class="perps">${showPrisoners(bannedUsers)}</div>`;
     appDiv.innerHTML = adminPage;
 }
@@ -12,11 +15,27 @@ function showPrisoners(bannedUsers) {
         let prisonerId = bannedUsers[prisonerIndex];
         let prisoner = model.data.users.find(user => user.id === prisonerId);
         if (prisoner) {
-        prisonersHtml += /*HTML*/ `
-        ${prisoner.username}
-        <img src="${prisoner.userImages[0]}">
-        <button onclick="releaseUser(${prisonerId})">Release</button>
-        <div>${model.input.loginUser.logInMesssage}</div>
+            prisonersHtml += /*HTML*/ `
+<div class="prison-cell">
+    <div class="bars">
+        <div></div>
+        <div></div>
+        <div><img src="${prisoner.userImages[0]}"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <p>Prisoner Name: <strong>${prisoner.username}</strong></p>
+    <button onclick="releaseUser(${prisonerId})">Release</button>
+</div>
+        
         `;
         }
     }

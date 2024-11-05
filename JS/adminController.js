@@ -7,6 +7,13 @@ updateAdminView();
 }
 
 function goToAdminPage(){
+    let admin = model.data.users[model.input.profile.selectedUser].isAdmin;
+    if(admin){
     model.app.currentPage = model.app.pages[6];
     changeView();
+    }
+    else{
+    model.input.loginUser.logInMesssage = `Not admin`;
+    changeView();
+    }
 }
