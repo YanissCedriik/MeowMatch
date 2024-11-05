@@ -16,7 +16,7 @@ function updateChatRoomView() {
         </div>
 
         <div class="chatInputfield">
-            <input type="text" id="messageInput" placeholder="Type a message..." />
+            <input type="text" onchange="model.input.messagesInput.messageToPush = this.value" placeholder="Type a message..." />
             <button onclick="sendMessage()">Send</button>
         </div>
         
