@@ -1,7 +1,7 @@
 
 function updateRegisterView() {
     document.getElementById('app').innerHTML = /*HTML*/`
-
+    ${createHeader()}
     <div class="login-container">
         <h1>Ny bruker</h1>
         

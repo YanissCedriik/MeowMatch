@@ -1,8 +1,8 @@
 function updateFeedProfileView(){
     let html = '';
-    html += /*HTML*/ `
-
-    <div class="mainContainerFP">
+    html = /*HTML*/ `
+    ${createHeader()}
+    <div class="mainContainer">
         <div>
             <img class="profilePictureFP" src="${model.data.users[model.input.profile.selectedProfileUser].userImages[0]}">
             <div class="overlayProfilePictureFP">
@@ -29,6 +29,7 @@ function updateFeedProfileView(){
         
         <div>${model.data.users[model.input.profile.selectedProfileUser].mcClub}</div>
     </div>
+    ${createFooter()}
     `;
 
     appDiv.innerHTML = html;

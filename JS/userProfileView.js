@@ -1,8 +1,8 @@
 function updateUserProfileView() {
     let currentUser = model.data.users[model.input.profile.selectedUser];
     userProfilePage = /*HTML*/`
-    
-    <div class="mainContainerProfile">
+    ${createHeader()}
+    <div class="mainContainer">
         <div class="innercardProfile">
 
             <div class="profileImages">
@@ -50,9 +50,9 @@ function updateUserProfileView() {
                
                          
         </div>
-    </div>
-
-
+        </div>
+        
+        ${createFooter()}
 
 
     `

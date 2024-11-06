@@ -7,6 +7,7 @@ function sendMessage() {
     time: timestamp,
   };
   model.data.chatRooms.push(newMessage);
+  model.input.messagesInput.messageToPush = "";
   updateChatRoomView();
 }
 

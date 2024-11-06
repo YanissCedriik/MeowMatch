@@ -2,6 +2,8 @@ function updateUserLoginView(){
     loginPage = /*HTML*/ `
     
     <div class="login-container">
+        ${createHeader()}
+    
         <h1>Velkommen!</h1>
         <input type="text" placeholder="Username..." class="input-field" oninput="model.input.loginUser.username=this.value">
         <form>
