@@ -3,9 +3,11 @@ function updateMainFeedView() {
     console.log("update oneP:", onePerson)
     if (!onePerson) {
         appDiv.innerHTML = /*HTML*/ `
-       <div class="mainFeedContainer">
+        ${createHeader()}
+        <div class="mainFeedContainer">
            <strong>There are no users left to display in the feed.<strong>
        </div>
+       ${createFooter()}
    `;
         return;
     }
@@ -13,6 +15,7 @@ function updateMainFeedView() {
     console.log("onePerson id:", model.data.users[model.input.profile.selectedProfileUser])
     console.log("onePerson updateView:", onePerson);
     mainFeedPage = /*HTML*/`
+    ${createHeader()}
        <div class="mainFeedContainer">
        <div class="outerCard">
            <div class="innerCard">
@@ -38,6 +41,8 @@ function updateMainFeedView() {
        </div>
    </div>
    </div>
+
+   ${createFooter()}
        `
     appDiv.innerHTML = mainFeedPage;
 }

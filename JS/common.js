@@ -43,11 +43,12 @@ function createFooter() {
     let footerHtml = '';
     footerHtml = /*HTML*/`
     <footer>
-    <button onclick="goToMainFeed()"><img src="Assets/Icons/heart-half.svg"></button>
-    <button onclick="              "><img src="Assets/Icons/grid-3x3-gap-fill.svg"></button>
-    <button onclick="goToMatches()"><img src="Assets/Icons/inbox-fill.svg"></button>
-    <button onclick="goToProfile()"><img src="Assets/Icons/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"></button>
+    <button onclick= "goToMainFeed()"><img src="Assets/Icons/heart-half.svg"></button>
+    <button onclick="goToAdminPage()"><img src="Assets/Icons/grid-3x3-gap-fill.svg"></button>
+    <button onclick=  "goToMatches()"><img src="Assets/Icons/inbox-fill.svg"></button>
+    <button onclick=  "goToProfile()"><img src="Assets/Icons/account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"></button>
 </footer>
 `;
+return footerHtml;
 
 }

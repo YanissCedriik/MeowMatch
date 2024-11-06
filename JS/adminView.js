@@ -12,13 +12,18 @@ function updateAdminView() {
 }
 
 function showPrisoners(bannedUsers) {
-    let prisonersHtml = '';
-    for (let prisonerIndex = 0; prisonerIndex < bannedUsers.length; prisonerIndex++) {
-        let prisonerId = bannedUsers[prisonerIndex];
-        let prisoner = model.data.users.find(user => user.id === prisonerId);
-        if (prisoner) {
-            prisonersHtml += /*HTML*/ `
-<div class="prison-cell">
+  let prisonersHtml = "";
+  for (
+    let prisonerIndex = 0;
+    prisonerIndex < bannedUsers.length;
+    prisonerIndex++
+  ) {
+    let prisonerId = bannedUsers[prisonerIndex];
+    let prisoner = model.data.users.find((user) => user.id === prisonerId);
+    if (prisoner) {
+      prisonersHtml += /*HTML*/ `
+      <div class= "mainContainer">
+      <div class="prison-cell">
     <div class="bars">
         <div></div>
         <div></div>

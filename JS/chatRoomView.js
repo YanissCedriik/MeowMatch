@@ -1,7 +1,8 @@
 function updateChatRoomView() {
     chatRoomPage = /*HTML*/ `
+    ${createHeader()}
     
-    <div class="chatRoomContainer">
+    <div class="mainContainer">
     <div class="innerCardChat">
         <div class="matchNameAndImage">
             <img src="${likedUser.userImages[0]}" >
@@ -23,7 +24,7 @@ function updateChatRoomView() {
     
     </div>
 </div>
-    
+${createFooter()}
     `;
   appDiv.innerHTML = chatRoomPage;
 }

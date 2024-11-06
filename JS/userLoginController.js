@@ -35,10 +35,13 @@ function goToLogOut(){
 
 
 function enterPressLogIn() {
+    
+    if (model.app.currentPage === "userLoginPage"){ 
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             findUserNamePassword();
         }
     });
+} else return
 }
 

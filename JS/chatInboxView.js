@@ -1,7 +1,8 @@
 function updateChatInboxView() {
   chatInboxPage = /*HTML*/ `
-    
-    <div class="mainContainerChatroomInbox">
+    ${createHeader()}
+
+    <div class="mainContainer">
         <div class="outerCardMatches">
             <div class="innerCardMatches">
                 ${drawPreviewMatches()}
@@ -16,7 +17,7 @@ function updateChatInboxView() {
             </div>
         </div>
     </div>
-    
+    ${createFooter()}
     `;
   appDiv.innerHTML = chatInboxPage;
 }
