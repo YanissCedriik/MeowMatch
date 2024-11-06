@@ -60,6 +60,7 @@ footer {
     padding: 8px 0;
     background-color: rgba(49, 25, 25, 0.531); 
     border-top: 1px solid #ccc; 
+    z-index: 1000;
 }
 
 footer button {
@@ -78,3 +79,86 @@ footer button img {
 footer button:hover img {
     transform: scale(1.2); 
 }
+
+    @media screen and (max-width: 1500px) {
+        /*--------MAIN FEED----------*/
+        .mainFeedContainer {
+            height: 70vh; 
+            padding: 15px;
+        }
+    
+        .outerCard {
+            width: 95%;
+            max-width: 500px;
+        }
+    
+        .innerCard {
+            padding: 15px;
+        }
+    
+        .userProfileName {
+            font-size: 1.4em;
+        }
+    
+        .userLocation {
+            margin-bottom: 0.5rem;
+        }
+    
+        .userInterests, .userBio {
+            font-size: 0.85em;
+        }
+    
+        .dislikeButton, .likeButton {
+            width: 50px;
+            height: 50px;
+        }
+    
+        .dislikeButton img, .likeButton img {
+            width: 25px;
+            height: 25px;
+        }
+    
+        .banButton {
+            width: 25px;
+            height: 25px;
+        }
+
+
+        /*--------Profile----------*/
+
+
+    }
+
+    @media screen and (max-width: 1500px) {
+        .mainContainerProfile {
+            padding: 15px; 
+            max-width: 95%;
+            top: 5%;
+        }
+    
+        .innercardProfile {
+            padding: 15px;
+        }
+    
+        .mainProfileImage img {
+            width: 20vw;
+        }
+    
+        .subProfileImages img {
+            width: 10vw;
+        }
+    
+        .bioInput {
+            width: 95%; 
+            padding: 8px;
+        }
+    
+        .userSelectedInterests, .selectInterests {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+        .userSelectedInterests button, .selectInterests button {
+            padding: 8px;
+        }
+    }
+    
