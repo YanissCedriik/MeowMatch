@@ -13,7 +13,7 @@ const model = {
       "adminPage",
       "feedProfilePage"
     ],
-    currentPage: "userLoginPage",
+    currentPage: "adminPage",
   }, // app Syntax
 
 
@@ -30,6 +30,7 @@ const model = {
       selectedMatch: null,
       selectedProfileUser: null,
     },
+
 
     registerUser: {
       id: null,
@@ -60,13 +61,17 @@ const model = {
       isPrincessCat: false,
       agreedToEULA: true,
     }, //registerInputs Syntax
-
+    profilePage: {
+      inputBio: '',
+    },
     messagesInput: {
       messageToPush: null,
       messages: [],
     }, //Messages Syntax
+    admin: {
+    adminMessage: '',
   }, //Inputs Syntax
-
+},
   data: {
 
     chatRooms:[],
