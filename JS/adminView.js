@@ -1,15 +1,14 @@
 function updateAdminView() {
-  let bannedUsers = model.data.adminPage.bannedUser;
-  adminPage = /*HTML*/ `
-    <h1>Hello ${
-      model.data.users[model.input.profile.selectedUser].username
-    }</h1>
-    <h2>This is your private Cyber-prison</h2>
-    <div>${model.input.loginUser.logInMesssage}</div>
-   <div class="perps">${showPrisoners(bannedUsers)}</div>
-    ${createFooter()}
-   `;
-  appDiv.innerHTML = adminPage;
+
+    let bannedUsers = model.data.adminPage.bannedUser;
+    adminPage = /*HTML*/`
+<div class="topInfo">
+    <h1>Hello ${model.data.users[model.input.profile.selectedUser].username}</h1>
+    <h3>This is your private Cyber-prison</h3>
+</div>
+    <div>${model.input.admin.adminMessage}</div>
+   <div class="perps">${showPrisoners(bannedUsers)}</div>`;
+    appDiv.innerHTML = adminPage;
 }
 
 function showPrisoners(bannedUsers) {
@@ -40,7 +39,11 @@ function showPrisoners(bannedUsers) {
         <div></div>
         <div></div>
     </div>
-    <p>Prisoner Name: <strong>${prisoner.username}</strong></p>
+    <p>Inmate Name:<br><strong>${prisoner.username}</strong></p>
+    ${prisoner.isPrincessCat ? "Crime:<strong>PrincessCat</strong>" : ""}
+    ${prisoner.isImposter ? "Crime:<br><strong>Perv</strong>" : ""}
+    ${!prisoner.isImposter && !prisoner.isPrincessCat ? "Crime:<br><strong>Peeing in public</strong>" : ""}
+<div>
     <button onclick="releaseUser(${prisonerId})">Release</button>
 </div>
 </div>
@@ -50,3 +53,9 @@ function showPrisoners(bannedUsers) {
   }
   return prisonersHtml;
 }
+
+// function randomCrime(){
+// let crimes = ['Blasphemy','Fighting', 'Shat in wrong garden', 'Jaywalking', 'Peeing in public'];
+// let randomNum = Math.floor(Math.random()*array.length);
+// return crimes[randomNum];
+// }
