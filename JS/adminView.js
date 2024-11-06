@@ -44,7 +44,6 @@ function showPrisoners(bannedUsers) {
     <button onclick="releaseUser(${prisonerId})">Release</button>
 </div>
 </div>
-${createFooter()}
         
         `;
     }
