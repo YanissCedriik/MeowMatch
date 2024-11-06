@@ -1,7 +1,8 @@
 function updateAdminView() {
   let bannedUsers = model.data.adminPage.bannedUser;
   adminPage = /*HTML*/ `
-<div class="topInfo">
+<div class="mainContainer">
+  <div class="topInfo">
     <h1>Hello ${
       model.data.users[model.input.profile.selectedUser].username
     }</h1>
@@ -10,6 +11,7 @@ function updateAdminView() {
     <div>${model.input.admin.adminMessage}</div>
    <div class="perps">${showPrisoners(bannedUsers)}</div>
    </div>
+
    ${createFooter()}
    `;
   appDiv.innerHTML = adminPage;
@@ -26,7 +28,6 @@ function showPrisoners(bannedUsers) {
     let prisoner = model.data.users.find((user) => user.id === prisonerId);
     if (prisoner) {
       prisonersHtml += /*HTML*/ `
-      <div class= "mainContainer">
       <div class="prison-cell">
     <div class="bars">
         <div></div>
