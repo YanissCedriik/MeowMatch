@@ -12,7 +12,7 @@ function showEm() {
     personArray = personArray.filter(user => !selectedUser.liked.includes(user.id) && !selectedUser.disliked.includes(user.id) && !model.data.adminPage.bannedUser.includes(user.id) &&
     !user.isPrincessCat && !user.isImposter);
 
-    console.log("personarray:", personArray)
+    console.log("personarray:", personArray) 
     
     if (personArray.length === 0) {
         model.input.loginUser.logInMesssage = '';
