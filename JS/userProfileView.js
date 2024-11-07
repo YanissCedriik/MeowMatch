@@ -2,7 +2,7 @@ function updateUserProfileView() {
     let currentUser = model.data.users[model.input.profile.selectedUser];
     userProfilePage = /*HTML*/`
     ${createHeader()}
-    <div class="mainContainer">
+    <div class="mainContainerProfile">
         <div class="innercardProfile">
 
             <div class="profileImages">
