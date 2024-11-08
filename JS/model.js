@@ -70,6 +70,10 @@ const model = {
     }, //Messages Syntax
     admin: {
     adminMessage: '',
+
+    mainFeed: {
+      mainFeedMessage: '',
+    }
   }, //Inputs Syntax
 },
   data: {
@@ -139,7 +143,7 @@ const model = {
       {
         //Male Users
         id: 2,
-        username: "CatMan",
+        username: "Gerard",
         password: "123",
         email: "mrcat@hotmail.com",
         isAdmin: false,

@@ -5,7 +5,7 @@ function updateMainFeedView() {
         appDiv.innerHTML = /*HTML*/ `
         ${createHeader()}
         <div class="mainFeedContainer">
-           <strong>There are no users left to display in the feed.<strong>
+           <strong>There are no users left to display in the feed.</strong>
        </div>
        ${createFooter()}
    `;

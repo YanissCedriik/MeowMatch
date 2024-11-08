@@ -12,11 +12,11 @@ function showEm() {
     personArray = personArray.filter(user => !selectedUser.liked.includes(user.id) && !selectedUser.disliked.includes(user.id) && !model.data.adminPage.bannedUser.includes(user.id) &&
     !user.isPrincessCat && !user.isImposter);
 
-    console.log("personarray:", personArray) 
+    console.log("personarray:", personArray)
     
     if (personArray.length === 0) {
-        model.input.loginUser.logInMesssage = '';
-        model.input.loginUser.logInMesssage =`<strong>There are no users left to display in the feed.<strong>`;
+        model.input.mainFeed.mainFeedMessage = '';
+        model.input.mainFeed.mainFeedMessage =`<strong>There are no users left to display in the feed.<strong>`;
         return null;
     }
     let randomNum = Math.floor(Math.random() * personArray.length)
@@ -56,6 +56,7 @@ function filterMenWomen() {
 function like() {
     selectedUser = model.data.users[model.input.profile.selectedUser];
     selectedUser.liked.push(model.input.profile.selectedProfileUser);
+    model.data.users[model.input.profile.selectedProfileUser].liked.push(selectedUser.id);
     console.log("liked:", model.input.profile.selectedProfileUser);
     console.log("liked array:", model.data.users[0].liked)
     updateMainFeedView();
