@@ -13,7 +13,7 @@ const model = {
       "adminPage",
       "feedProfilePage"
     ],
-    currentPage: "adminPage",
+    currentPage: "userLoginPage",
   }, // app Syntax
 
 
@@ -26,7 +26,7 @@ const model = {
     }, //loginInputs Syntax
 
     profile: {
-      selectedUser: 0,
+      selectedUser: null,
       selectedMatch: null,
       selectedProfileUser: null,
     },
@@ -92,7 +92,7 @@ const model = {
         age: 34,
         location: "Larvik",
         bio: "Liker å skru, spille på slurva og kjøre sykkel",
-        interests: ["Martial Arts", "Riding Motorcycles", "Parkour",],
+        interests: [],
         interestsBox: ['Martial Arts', 'Riding Motorcycles','Surfing','The Office', 'Gaming','Netflix', 'Parkour', 'FurryBallin',],
         liked: [],
         disliked: [],

@@ -20,7 +20,7 @@ function createChosenInterests() {
     let currentUser = model.data.users[model.input.profile.selectedUser];
     for (let i = 0; i < currentUser.interests.length; i++) {
         createSelectedInterests += /*HTML*/ `
-        <button onclick="removeInterest(this.value)">${currentUser.interests[i]}</button>
+        <button onclick="removeInterest(${i})">${currentUser.interests[i]}</button>
         `;
     }
 
@@ -33,28 +33,30 @@ function createAllInterests() {
     let currentUser = model.data.users[model.input.profile.selectedUser];
     for (let i = 0; i < currentUser.interestsBox.length; i++) {
         createAllInterestsHtml += /*HTML*/ `
-        <button onclick="addInterest(this.value)">${currentUser.interestsBox[i]} </button>`;
+        <button onclick="addInterest('${currentUser.interestsBox[i]}')">${currentUser.interestsBox[i]} </button>`;
     }
     
     return createAllInterestsHtml ;
 }
 
 function addInterest(interest) {
-let chosenInterests = model.data.users[model.input.profile.selectedUser].interests
-
-if (chosenInterests.includes(interest) ){
-    console.log("allerede valgt")
-    return
-}
-    chosenInterests.push(interest)
-}
-
-function removeInterest(interest) {
-    let chosenInterests = model.data.users[model.input.profile.selectedUser].interests
-
-    if (chosenInterests.includes(interest)){
-        chosenInterests=chosenInterests.filter(i=> i !==interest);
-        model.data.users[model.input.profile.selectedUser].interests = chosenInterests
+    let chosenInterests = model.data.users[model.input.profile.selectedUser];
+    
+    if (chosenInterests.interests.includes(interest) ){
+        console.log("allerede valgt")
+        return
+    }
+        chosenInterests.interests.push(interest);
+        chosenInterests.interestsBox = chosenInterests.interestsBox.filter(item => item !== interest);
+    
+        updateUserProfileView()
     }
 
+function removeInterest(index) {
+    let selectedUser = model.data.users[model.input.profile.selectedUser]
+    let splicedInterest = selectedUser.interests.splice(index,1)[0];
+    if (splicedInterest && !selectedUser.interestsBox.includes(splicedInterest)) {
+        selectedUser.interestsBox.push(splicedInterest);
+    }
+    updateUserProfileView()
 }

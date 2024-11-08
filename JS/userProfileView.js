@@ -1,6 +1,6 @@
 function updateUserProfileView() {
-    let currentUser = model.data.users[model.input.profile.selectedUser];
-    userProfilePage = /*HTML*/`
+  let currentUser = model.data.users[model.input.profile.selectedUser];
+  userProfilePage = /*HTML*/ `
     ${createHeader()}
     <div class="mainContainerProfile">
         <div class="innercardProfile">
@@ -18,13 +18,23 @@ function updateUserProfileView() {
             <div class="userBio">
                 <h4>Bio</h4>
                 
-                <input type="text" placeholder="${currentUser.bio}" class="bioInput">
+                <input 
+                onchange="model.data.users[model.input.profile.selectedUser].bio = this.value" 
+                type="text" 
+                
+                placeholder="${currentUser.bio}" 
+                class="bioInput">
             </div>
 
             <div class="userClub">
                 <h4>MC-klubb</h4>
 
-                <input type="text" placeholder="${currentUser.mcClub}" class="bioInput">
+                <input 
+                onchange="model.data.users[model.input.profile.selectedUser].mcClub = this.value" 
+                type="text" 
+                
+                placeholder="${currentUser.mcClub}" 
+                class="bioInput">
             </div>
 
             
@@ -33,19 +43,12 @@ function updateUserProfileView() {
 
             <div><h4>My Interests (Max 8)</h4></div>
             <div class="userSelectedInterests">
-                ${currentUser.interests}
+               ${createChosenInterests()} 
             </div>
             
             <h4>Select Interests:</h4>
             <div class="selectInterests">
-                <button onclick=addInterest(this.innerText)>Riding Motorcycles</button>
-                <button onclick=addInterest(this.innerText)>Surfing</button>
-                <button onclick=addInterest(this.innerText)>"The Office"</button>
-                <button onclick=addInterest(this.innerText)>Gaming</button>
-                <button onclick=addInterest(this.innerText)>Netflix</button>
-                <button onclick=addInterest(this.innerText)>Parkour</button>
-                <button onclick=addInterest(this.innerText)>Martial Arts</button>
-                <button onclick=addInterest(this.innerText)>FurryBallin'</button>
+                ${createAllInterests()}
             </div>
                
                          
@@ -55,6 +58,6 @@ function updateUserProfileView() {
         ${createFooter()}
 
 
-    `
-    appDiv.innerHTML = userProfilePage;
+    `;
+  appDiv.innerHTML = userProfilePage;
 }
