@@ -22,7 +22,8 @@ function updateUserProfileView() {
                 onchange="model.data.users[model.input.profile.selectedUser].bio = this.value" 
                 type="text" 
                 
-                placeholder="${currentUser.bio}" 
+                value="${currentUser.bio}" 
+                placeholder ="Skriv om deg selv..."
                 class="bioInput">
             </div>
 
@@ -33,7 +34,8 @@ function updateUserProfileView() {
                 onchange="model.data.users[model.input.profile.selectedUser].mcClub = this.value" 
                 type="text" 
                 
-                placeholder="${currentUser.mcClub}" 
+                value="${currentUser.mcClub}" 
+                placeholder ="Hvilken klubb er du med i?"
                 class="bioInput">
             </div>
 
@@ -53,7 +55,7 @@ function updateUserProfileView() {
                
                          
         </div>
-        </div>
+    </div>
         
         ${createFooter()}
 
