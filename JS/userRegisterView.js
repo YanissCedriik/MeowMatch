@@ -32,6 +32,13 @@ function updateRegisterView() {
                 <span>Pusejenter</span>
             </label>
         </div>
+
+        <div>
+        <label class="checkbox-label">
+                <input type="checkbox" class="styled-checkbox" id="women" onchange="model.input.registerUser.isPrincessCat=this.checked">
+                <span>isPrincessCat?</span>
+            </label>
+        </div>
         <button onclick="registerNewUser()" class="btn-new">Start Swiping</button>
         <div>${model.input.registerUser.errorMessage}</div>
     </div>
