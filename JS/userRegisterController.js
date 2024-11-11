@@ -39,6 +39,7 @@ function registerNewUser() {
 
         userIMG: '',
         userImages: [],
+        isPrincessCat: regUser.isPrincessCat,
     };
     console.log("regUsername:", model.input.registerUser.username);
     console.log("regpass:", model.input.registerUser.password);

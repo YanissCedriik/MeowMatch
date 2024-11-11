@@ -3,9 +3,7 @@ function updateAdminView() {
   adminPage = /*HTML*/ `
 <div class="mainContainer">
   <div class="topInfo">
-    <h1>Hello ${
-      model.data.users[model.input.profile.selectedUser].username
-    }</h1>
+    <h1>Hello ${model.data.users[model.input.profile.selectedUser].username}</h1>
     <h3>This is your private Cyber-prison</h3>
 </div>
     <div>${model.input.admin.adminMessage}</div>
@@ -47,11 +45,7 @@ function showPrisoners(bannedUsers) {
     <p>Inmate Name:<br><strong>${prisoner.username}</strong></p>
     ${prisoner.isPrincessCat ? "Crime:<strong>PrincessCat</strong>" : ""}
     ${prisoner.isImposter ? "Crime:<br><strong>Perv</strong>" : ""}
-    ${
-      !prisoner.isImposter && !prisoner.isPrincessCat
-        ? "Crime:<br><strong>Peeing in public</strong>"
-        : ""
-    }
+    ${!prisoner.isImposter && !prisoner.isPrincessCat ? "Crime:<br><strong>Peeing in public</strong>" : ""}
 <div>
     <button onclick="releaseUser(${prisonerId})">Release</button>
 </div>

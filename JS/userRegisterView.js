@@ -1,5 +1,5 @@
-
 function updateRegisterView() {
+    model.input.registerUser.errorMessage = '';
     document.getElementById('app').innerHTML = /*HTML*/`
     ${createHeader()}
     <div class="login-container">
@@ -43,7 +43,7 @@ function updateRegisterView() {
         <div>${model.input.registerUser.errorMessage}</div>
     </div>
     
-`
+`;
 }
-
+console.log("princessCat:", model.input.registerUser.isPrincessCat)
 //checkbox - prøv ternary operator
