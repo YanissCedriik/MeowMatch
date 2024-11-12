@@ -22,6 +22,7 @@ function updateMainFeedView() {
            <div class="userIMG"><img onclick="goToFeedProfile()" src="${onePerson.userImages[0]}"></div>
            <div class="userProfileName"><div><span>${onePerson.username}</span></div></div>
            <div class="imgStream">${imgStreamOnePerson(onePerson)}</div>
+            ${onePerson.gender}
                <div class="userLocation"><img src="Assets/Icons/geo-alt.svg"><span>${onePerson.location}</span></div>
                <div class="userInterests">${interestsOnePerson(onePerson)}</div>
                <div class="userBio">${onePerson.bio}</div>
